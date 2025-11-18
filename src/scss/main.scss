@@ -1,0 +1,14 @@
+@forward 'base';
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--main-font-family);
+    background-color: #faf8f3;
+    font-weight: 400;
+    line-height: 1.75;
+    min-height: 100%;
+    margin: 0;
+}
