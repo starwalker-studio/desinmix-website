@@ -1,15 +1,16 @@
+@forward '/src/scss/base/index';
+
 .navbar {
     width: 100%;
-    // position: fixed;
+    position: fixed;
     top: 0;
     z-index: 999;
-    background-color: #04142f;
-    transition: background-color 0.4s ease, box-shadow 0.3s ease;
-    // backdrop-filter: blur(0px);
+    background-color: #04142fb7;
+    backdrop-filter: blur(9px);
 }
 
 .nav_container {
-    max-width: 1320px;
+    max-width: 1150px;
     margin-left: auto;
     margin-right: auto;
     padding-left: 15px;
@@ -62,8 +63,8 @@
         margin-left: 2ex;
         margin-right: 2ex;
         text-transform: uppercase;
-        font-family: Oswald, Arial, sans-serif;
-        font-weight: 900;
+        font-family: var(--main-font-family-open-oswald);
+        font-weight: 540;
         line-height: 1.625;
 
         a {

@@ -1,5 +1,6 @@
 @use 'main-constants' as const;
 
 :root{
-    --main-font-family: #{const.$main-font-family};
+    --main-font-family-open-sans: #{const.$main-font-family-open-sans};
+    --main-font-family-open-oswald: #{const.$main-font-family-open-oswald};
 }

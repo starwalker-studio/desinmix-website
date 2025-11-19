@@ -1,0 +1,118 @@
+@forward 'index-root-values';
+@use '../styles/index' as *;
+
+.container {
+    @include index-container-style;
+}
+
+.content {
+    @include index-content-style;
+    // margin-top: 12ex;
+}
+
+.tech_section {
+    width: 100%;
+    // padding: 8rem 0;
+    min-height: 600px;
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+    overflow: hidden;
+    font-family: var(--tech-font-family);
+    background-color: var(--tech-section-background-color);
+}
+
+.tech_grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 3rem;
+    width: 100%;
+    margin: 0 auto;
+    justify-items: center;
+    align-items: center;
+    // padding: 2rem 0;
+    margin-bottom: 10ex;
+    margin-top: 10ex;
+    max-width: 1200px;
+}
+
+.icon_text {
+    text-align: center;
+
+    h3 {
+        font-size: 1.1em;
+        font-weight: 500;
+    }
+
+    span {
+        font-size: 4.4em;
+    }
+
+}
+
+.icon_display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 120px;
+    padding: 1rem;
+
+    img {
+        width: auto;
+        height: 80px;
+        object-fit: contain;
+        display: block;
+        filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.30)) drop-shadow(0 3px 5px rgba(0, 0, 0, 0.20));
+    }
+}
+
+@media (max-width: 768px) {
+    .tech_grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.green_background {
+    background: #095B29;
+    background: linear-gradient(180deg, rgba(9, 91, 41, 1) 0%, rgba(17, 147, 70, 1) 100%);
+    color: #eff1f5;
+}
+
+.header_tech {
+    // filter: drop-shadow(0 4px 8px rgba(0, 0, 0, 0.45));
+    padding-top: 12ex;
+    // padding-bottom: 8ex;
+    text-align: center;
+
+    h2 {
+        font-size: 2em;
+        text-transform: uppercase;
+        font-weight: 700;
+    }
+}
+
+.tech_wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 4ex 14ex 4ex;
+}
+
+.header_text {
+    max-width: 1200px;
+    text-align: start;
+    font-size: 1.4em;
+    font-weight: 500;
+
+    .sub_header {
+        font-size: 1.3em;
+        font-weight: 500;
+        margin: 0;
+    }
+
+    .code_languajes {
+        font-size: 1.25em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+}

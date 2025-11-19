@@ -1,0 +1,12 @@
+@use 'index-constants' as const;
+@use '../base/main-constants' as main_const;
+
+:root {
+    --tech-background-background-image: #{const.$tech-background-background-image};
+    --service-background-color: #{const.$service-background-color};
+    --overlay-background: #{const.$overlay-background};
+    --service-font-family: #{main_const.$main-font-family-open-roboto};
+    --service-text-shadow: #{const.$service-text-shadow};
+    --tech-font-family: #{main_const.$main-font-family-open-montserrat};
+    --tech-section-background-color: #{main_const.$main-white-color};
+}

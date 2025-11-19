@@ -1,0 +1,13 @@
+@mixin index-container-style {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@mixin index-content-style {
+    width: 100%;
+    max-width: 1400px;
+    padding: 0 15px;
+}
