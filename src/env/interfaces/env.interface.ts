@@ -3,6 +3,7 @@ export interface IHEADER_ENV {
         readonly MAX_MOBILE_WIDTH: number
         readonly LOGO: string
     }
+    readonly NAV_LINK: {id:number, label: string, path: string}[]
 }
 
 export interface ICONTENT {

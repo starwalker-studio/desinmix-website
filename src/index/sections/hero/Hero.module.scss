@@ -1,10 +1,14 @@
+@use '/src/scss/styles/' as *;
+@forward '/src/scss/index/index-root-values';
+@forward '/src/scss/base/';
+
 .hero {
     position: relative;
     width: 100%;
     height: 102vh;
     min-height: 600px;
 
-    background-image: url('/index/hero/hero-index.jpg');
+    background-image: var(--hero-background-image);
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -17,15 +21,15 @@
 .overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(0deg, rgba(4, 20, 47, 0.62) 0%, rgba(4, 20, 47, 1) 100%);
+    background: var(--hero-overlay-background);
 }
 
 .content {
     position: relative;
     z-index: 2;
-    color: #eff1f5;
+    color: var(--main-white-color);
     max-width: 1050px;
-    font-family: "Roboto", sans-serif;
+    font-family: var(--main-font-family-open-roboto);
     text-align: center;
 
     h1 {
@@ -47,22 +51,6 @@
         align-items: center;
         justify-content: center;
 
-        button {
-            width: 40%;
-            background: #fff;
-            color: #04142f;
-            border: none;
-            padding: 18px 28px;
-            border-radius: 6px;
-            font-size: 1.5rem;
-            cursor: pointer;
-            font-weight: 600;
-            transition: 0.4s all ease;
-
-            &:hover {
-                color: #fff;
-                background: #D9762B;
-            }
-        }
+        @include button-style(#eff1f5, #04142f, 1.4rem, 600, 40%, #D9762B, #eff1f5);
     }
 }

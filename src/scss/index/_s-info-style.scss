@@ -52,21 +52,5 @@
     display: flex;
     justify-content: center;
 
-    button {
-        background: #0a7995;
-        color: #fff;
-        border: none;
-        padding: 12px 28px;
-        border-radius: 6px;
-        font-size: 1.4rem;
-        width: 230px;
-        cursor: pointer;
-        font-weight: 600;
-        transition: 0.4s all ease;
-
-        &:hover {
-            color: #fff;
-            background: #D9762B;
-        }
-    }
+    @include button-style(#0a7995, #fff, 1.4rem, 600, 230px, #D9762B, #fff);
 }

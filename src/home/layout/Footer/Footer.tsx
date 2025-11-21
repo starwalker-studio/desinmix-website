@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import { NavLink } from 'react-router-dom';
 import { FOOTER_ENV } from '../../../env/footer.env';
 import style from './Footer.module.scss';
@@ -26,7 +28,10 @@ export const Footer = () => {
                                     )
                                 }
                                 <div className={style.contact_button}>
-                                    <button>Enviar WhatsApp</button>
+                                    <button>
+                                        Enviar WhatsApp
+                                        <span><FontAwesomeIcon icon={faWhatsapp} /></span>
+                                    </button>
                                 </div>
                             </div>
                             <div className={style.services_text}>

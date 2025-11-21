@@ -1,3 +1,5 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCommentDollar } from '@fortawesome/free-solid-svg-icons';
 import style from './ContactUs.module.scss';
 
 export const ContactUs = () => {
@@ -12,20 +14,13 @@ export const ContactUs = () => {
                                     <h2>Hablemos de tu proyecto</h2>
                                     <p>Cuéntanos qué quieres lograr y te ayudamos a convertirlo en una solución profesional.</p>
                                     <p>Envíanos tu plan por correo y solicita tu cotización.</p>
-                                    {/* <p>Escríbenos o mándanos un WhatsApp, estamos para apoyarte.</p>
-                                    <div>
-                                        <button>Enviar WhatsApp</button>
-                                    </div> */}
                                 </div>
                             </div>
-                            <div className={style.contact_form}>
-                                <form action="">
-                                    <input type="text" placeholder='Nombre' />
-                                    <input type="email" placeholder='Correo electrónico' />
-                                    <input type="text" placeholder='Asunto' />
-                                    <textarea name="" id="" placeholder='Mensaje'></textarea>
-                                    <button>Enviar Correo</button>
-                                </form>
+                            <div className={style.quote_button}>
+                                <button>
+                                    Cotiza Ahora
+                                    <span><FontAwesomeIcon icon={faCommentDollar} /></span>
+                                </button>
                             </div>
                         </div>
                     </div>

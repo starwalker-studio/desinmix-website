@@ -1,4 +1,5 @@
 @forward 'index-root-values';
+@forward '../base/';
 @use '../styles/index' as *;
 
 .container {
@@ -56,7 +57,7 @@
         height: 80px;
         object-fit: contain;
         display: block;
-        filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.30)) drop-shadow(0 3px 5px rgba(0, 0, 0, 0.20));
+        filter: var(--drop-shadow-filter);
     }
 }
 
@@ -68,8 +69,8 @@
 
 .green_background {
     background: #095B29;
-    background: linear-gradient(180deg, rgba(9, 91, 41, 1) 0%, rgba(17, 147, 70, 1) 100%);
-    color: #eff1f5;
+    background: var(--green-gradient-background);
+    color: var(--main-white-color);
 }
 
 .header_tech {

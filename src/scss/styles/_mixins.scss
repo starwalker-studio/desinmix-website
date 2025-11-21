@@ -38,3 +38,45 @@
         font-weight: 700;
     }
 }
+
+@mixin button-style($b-color, $text-color, $font-size, $font-weight, $width, $b-hover, $h-color) {
+    button {
+        background: $b-color;
+        color: $text-color;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 6px;
+        font-size: $font-size;
+        width: $width;
+        cursor: pointer;
+        font-weight: $font-weight;
+        transition: 0.4s all ease;
+
+        &:hover {
+            color: $h-color;
+            background: $b-hover;
+        }
+    }
+}
+
+@mixin header-button-style($b-color, $text-color, $font-size, $font-weight, $b-hover, $h-color) {
+    button {
+        background: transparent;
+        color: $text-color;
+        border: solid 1px $b-color;
+        padding: 9px 28px;
+        border-radius: 6px;
+        font-size: $font-size;
+        width: 100%;
+        cursor: pointer;
+        font-weight: $font-weight;
+        transition: 0.3s all ease-in-out;
+        text-transform: uppercase;
+
+        &:hover {
+            border: solid 1px transparent;
+            color: $h-color;
+            background: $b-hover;
+        }
+    }
+}

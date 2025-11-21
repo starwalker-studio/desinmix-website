@@ -1,4 +1,5 @@
 @forward '/src/scss/base/main-root-values';
+@use '/src/scss/styles/' as *;
 
 .footer_background {
     background-color: rgb(28, 28, 28);
@@ -63,7 +64,7 @@
         margin: 0;
         padding: 0;
         font-size: 1.7ex;
-        font-weight: 520;
+        font-weight: 510;
     }
 
     p {
@@ -80,22 +81,11 @@
 .contact_button {
     margin-top: 12px;
 
-    button {
-        background: #25D366;
-        color: #181717;
-        border: none;
-        padding: 12px 28px;
-        border-radius: 6px;
-        font-size: .9rem;
-        cursor: pointer;
-        font-weight: 600;
-        transition: 0.4s all ease;
-
-        &:hover {
-            color: #fff;
-            background: #147538;
-        }
+    span {
+        margin-left: 5px;
     }
+
+    @include button-style(#25D366, #181717, .9rem, 600, none, #147538, #fff);
 }
 
 .footer_background_dark {
@@ -117,7 +107,7 @@
 .link {
     color: #fff;
     text-decoration: none;
-    
+
     &:hover {
         color: #99e2ff;
         text-decoration: underline;

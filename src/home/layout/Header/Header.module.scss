@@ -1,4 +1,5 @@
 @forward '/src/scss/base/index';
+@use '/src/scss/styles/' as *;
 
 .navbar {
     width: 100%;
@@ -24,50 +25,91 @@
     padding: 1ex;
 }
 
-.a_nav_logo {
-    cursor: pointer;
+
+.icon_menu_group {
     display: flex;
     align-items: center;
-    position: relative;
-    color: #333;
+    gap: 1rem;
 
-    a {
-        text-decoration: none;
-    }
-
-    img {
-        vertical-align: middle;
-        max-width: 100%;
-        display: inline-block;
-        width: 176px;
-    }
-}
-
-.nav_menu {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #dde6ed;
-
-    ul {
+    .a_nav_logo {
+        cursor: pointer;
         display: flex;
         align-items: center;
-        list-style: none;
-        padding: 0;
-    }
-
-    li {
-        cursor: pointer;
-        margin-left: 2ex;
-        margin-right: 2ex;
-        text-transform: uppercase;
-        font-family: var(--main-font-family-open-oswald);
-        font-weight: 540;
-        line-height: 1.625;
+        position: relative;
+        color: #333;
 
         a {
             text-decoration: none;
         }
+
+        img {
+            vertical-align: middle;
+            max-width: 100%;
+            display: inline-block;
+            width: 176px;
+        }
+    }
+
+    .nav_menu {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        ul {
+            display: flex;
+            align-items: center;
+            list-style: none;
+            padding: 0;
+        }
+
+        li {
+            cursor: pointer;
+            margin-left: 2ex;
+            margin-right: 2ex;
+            text-transform: uppercase;
+            font-family: var(--main-font-family-open-oswald);
+            font-weight: 430;
+            line-height: 1.825;
+
+            a {
+                color: #eff1f5;
+                text-decoration: none;
+                transition: color .3s ease;
+
+                &:hover {
+                    color: #9fa6b4;
+                }
+            }
+
+        }
+
+        .item_active {
+            color: #71b5c6;
+        }
+    }
+}
+
+
+.nav_buttons {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1rem;
+
+    .contact_button {
+        span {
+            margin-left: 8px;
+        }
+
+        @include header-button-style(#ee8738, #f59d5a, 1.78ex, 540, #83481b, #fff);
+    }
+
+    .whats_button {
+        span {
+            margin-left: 8px;
+        }
+
+        @include header-button-style(#25D366, #64f599, 1.78ex, 540, #147538, #fff);
     }
 }
