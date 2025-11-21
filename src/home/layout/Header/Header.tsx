@@ -1,10 +1,19 @@
 import { NavLink } from 'react-router-dom';
 import { HEADER_ENV } from '../../../env/header.env';
+import { useScrollDown } from '../../../hooks/useScrollDown';
+import { motion } from 'framer-motion';
 import style from './Header.module.scss';
 
 export const Header = () => {
+
+    const { background, navbarTransition, navbarEffects } = useScrollDown();
+
     return (
-        <div className={style.navbar}>
+        <motion.nav
+            className={style.navbar}
+            animate={background}
+            variants={navbarEffects}
+            transition={navbarTransition}>
             <div className={style.nav_container}>
                 <div className={style.nav_wrapper}>
                     <NavLink to={"/"} className={style.a_nav_logo}>
@@ -23,6 +32,6 @@ export const Header = () => {
                     </div> */}
                 </div>
             </div>
-        </div>
+        </motion.nav>
     )
 }

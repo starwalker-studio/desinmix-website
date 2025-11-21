@@ -5,8 +5,7 @@
     position: fixed;
     top: 0;
     z-index: 999;
-    background-color: #04142fb7;
-    backdrop-filter: blur(9px);
+    backdrop-filter: blur(8px);
 }
 
 .nav_container {
@@ -49,7 +48,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #dde6ed;    
+    color: #dde6ed;
 
     ul {
         display: flex;

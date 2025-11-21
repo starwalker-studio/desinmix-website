@@ -1,0 +1,125 @@
+@forward '/src/scss/base/main-root-values';
+
+.footer_background {
+    background-color: rgb(28, 28, 28);
+}
+
+.footer_container {
+    width: 100%;
+    margin: 0 auto;
+    padding-top: 8ex;
+    padding-bottom: 8ex;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.footer_wrapper {
+    margin: 0;
+    padding: 2ex;
+}
+
+.footer_content_grid {
+    max-width: 1560px;
+    display: flex;
+    gap: 4.5rem;
+    width: 100%;
+    margin: 0;
+    justify-items: center;
+    align-items: start;
+    color: #fff;
+    font-family: var(--main-font-family-open-roboto);
+}
+
+.footer_icon {
+    display: flex;
+    align-items: start;
+    justify-content: center;
+    margin: 0;
+
+    img {
+        width: auto;
+        height: 150px;
+        object-fit: contain;
+    }
+}
+
+.services_text,
+.what_we_do_text,
+.contact {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin: 0;
+
+    h2 {
+        margin: 0 0 8px;
+        font-size: 1.4em;
+        text-transform: uppercase;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 1.7ex;
+        font-weight: 520;
+    }
+
+    p {
+        margin: 0;
+        font-size: 1.7ex;
+        font-weight: 520;
+    }
+}
+
+.what_we_do_text {
+    max-width: 290px;
+}
+
+.contact_button {
+    margin-top: 12px;
+
+    button {
+        background: #25D366;
+        color: #181717;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 6px;
+        font-size: .9rem;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.4s all ease;
+
+        &:hover {
+            color: #fff;
+            background: #147538;
+        }
+    }
+}
+
+.footer_background_dark {
+    background-color: #0f0f0f;
+    color: #fff;
+}
+
+.copyright {
+    text-align: center;
+    padding: 1.5ex;
+
+    p {
+        font-size: 1.4ex;
+        margin: 0;
+        font-weight: 600;
+    }
+}
+
+.link {
+    color: #fff;
+    text-decoration: none;
+    
+    &:hover {
+        color: #99e2ff;
+        text-decoration: underline;
+    }
+}

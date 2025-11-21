@@ -1,0 +1,130 @@
+@use '/src/scss/styles/' as *;
+@forward '/src/scss/base/main-root-values';
+
+.dark_blue_background {
+    background-color: #04142f;
+    color: #eff1f5;
+}
+
+.contact_container {
+    @include index-container-style;
+}
+
+.contact_content {
+    @include index-content-style;
+}
+
+.contact_wrapper {
+    margin: 0;
+    width: 100%;
+    padding-top: 6.5em;
+    padding-bottom: 6.5em;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.contact_grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+    padding: 1rem 0;
+    margin: 0 auto;
+}
+
+.contact_form {
+    padding: 0 3ex;
+
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: .83rem;
+
+        input,
+        textarea {
+            background-color: rgb(56, 76, 110);
+            font-size: 2ex;
+            padding: 2ex;
+            border-radius: 8px;
+            width: 100%;
+            border: solid 2px #35474e;
+            color: #fff;
+            font-weight: 580;
+
+            &::placeholder {
+                color: #eff1f58f;
+            }
+
+            &:focus {
+                outline: solid 1.3px #eff1f5;
+            }
+        }
+
+        input {
+            height: 5ex;
+        }
+
+        textarea {
+            min-width: 100%;
+            min-height: 150px;
+            resize: vertical;
+            font-family: var(--main-font-family-open-sans);
+            font-weight: 658;
+        }
+
+        button {
+            background: #ee8738;
+            color: #141414;
+            border: none;
+            padding: 12px 28px;
+            border-radius: 6px;
+            font-size: 1rem;
+            width: 100%;
+            cursor: pointer;
+            font-weight: 600;
+            transition: 0.4s all ease;
+
+            &:hover {
+                color: #fff;
+                background: #83481b;
+            }
+        }
+    }
+}
+
+.form_text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 2ex;
+
+    h2 {
+        font-size: 2em;
+        margin: 0;
+        font-weight: 500;
+    }
+
+    p {
+        font-size: 1.13em;
+        font-weight: 400;
+    }
+
+    button {
+        background: #25D366;
+        color: #181717;
+        border: none;
+        padding: 12px 28px;
+        border-radius: 6px;
+        font-size: 1rem;
+        width: 230px;
+        cursor: pointer;
+        font-weight: 600;
+        transition: 0.4s all ease;
+
+        &:hover {
+            color: #fff;
+            background: #147538;
+        }
+    }
+}

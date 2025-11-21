@@ -4,8 +4,10 @@ export const Index = () => {
   return (
     <>
       <Section.Hero />
-      <Section.Service />
+      <Section.Description />
       <Section.Tech />
+      <Section.SInfo />
+      <Section.ContactUs />
     </>
   )
 }
