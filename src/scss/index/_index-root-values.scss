@@ -1,5 +1,6 @@
 @use 'index-constants' as const;
 @use '../base/main-constants' as main_const;
+@use '../utils/' as *;
 
 :root {
     --tech-background-background-image: #{const.$tech-background-background-image};
@@ -13,4 +14,17 @@
     --drop-shadow-filter: #{const.$drop-shadow-filter};
     --hero-overlay-background: #{const.$hero-overlay-background};
     --hero-background-image: #{const.$hero-background-image};
+    --hero-h1-font-size: #{const.$hero-h1-font-size};
+    --hero-p-font-size: #{const.$hero-p-font-size};
+    --hero-button-font-size: #{const.$hero-button-font-size};
+    --hero-height: #{const.$hero-height};
+}
+
+@include mobile {
+    :root {
+        --hero-h1-font-size: #{const.$hero-h1-font-size-mobile};        
+        --hero-p-font-size: #{const.$hero-p-font-size-mobile};
+        --hero-button-font-size: #{const.$hero-button-font-size-mobile};
+        --hero-height: #{const.$hero-height-mobile};
+    }
 }

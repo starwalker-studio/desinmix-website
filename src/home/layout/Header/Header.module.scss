@@ -1,4 +1,6 @@
+@forward '/src/scss/mobile/layout/header/';
 @forward '/src/scss/base/index';
+@forward '/src/scss/mobile/';
 @use '/src/scss/styles/' as *;
 
 .navbar {
@@ -20,7 +22,7 @@
 .nav_wrapper {
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: var(--nav-wrapper-justify-content);
     align-items: center;
     padding: 1ex;
 }
@@ -46,7 +48,7 @@
             vertical-align: middle;
             max-width: 100%;
             display: inline-block;
-            width: 176px;
+            width: var(--icon-navbar-width);
         }
     }
 

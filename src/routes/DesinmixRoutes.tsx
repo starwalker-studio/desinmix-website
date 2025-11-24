@@ -12,7 +12,7 @@ export const DesinmixRoutes = () => {
                     element={<>
                         <Header />
                         <Index />
-                        <Footer />
+                        {/* <Footer /> */}
                     </>} />
             </Routes>
         </>
