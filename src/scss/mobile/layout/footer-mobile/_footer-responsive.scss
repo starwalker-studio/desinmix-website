@@ -1,0 +1,12 @@
+@use '../../../utils/' as *;
+
+@include mobile {
+    .footer_content_grid {
+        display: flex;
+        flex-direction: column;
+        justify-items: center;
+        gap: 2.5rem;
+        width: 100%;
+        margin: 0;        
+    }
+}

@@ -1,5 +1,6 @@
 @use '/src/scss/styles/' as *;
 @forward '/src/scss/base/main-root-values';
+@use '/src/scss/utils/' as *;
 
 .dark_blue_background {
     background-color: var(--main-dark-blue-color);
@@ -31,12 +32,18 @@
     max-width: 1000px;
     padding: 1rem 0;
     margin: 0 auto;
+    @include mobile {
+        grid-template-columns: 1fr;
+    }
 }
 
 .quote_button {
     display: flex;
     align-items: center;
     padding: 0 3ex;
+    @include mobile {
+        padding: 1.7ex;
+    }
 
     span {
         margin-left: 1ex;
@@ -61,22 +68,4 @@
         font-size: 1.13em;
         font-weight: 400;
     }
-
-    // button {
-    //     background: #25D366;
-    //     color: #181717;
-    //     border: none;
-    //     padding: 12px 28px;
-    //     border-radius: 6px;
-    //     font-size: 1rem;
-    //     width: 230px;
-    //     cursor: pointer;
-    //     font-weight: 600;
-    //     transition: 0.4s all ease;
-
-    //     &:hover {
-    //         color: #fff;
-    //         background: #147538;
-    //     }
-    // }
 }

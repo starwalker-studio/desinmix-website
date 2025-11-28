@@ -1,23 +1,17 @@
 import { NavLink } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faBars } from '@fortawesome/free-solid-svg-icons';
-import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
-import { HEADER_ENV } from '../../../env/header.env';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { HEADER_ENV, MOBILE_MENU } from '../../../env/header.env';
+import * as NavElements from '../../../env/elements/Header';
 import { useScrollDown } from '../../../hooks/useScrollDown';
+import { useMobileScreen } from '../../../hooks/useMobileScreen';
 import { motion } from 'framer-motion';
 import style from './Header.module.scss';
-import { useMobileScreen } from '../../../hooks/useMobileScreen';
 
 export const Header = () => {
 
     const { background, navbarTransition, navbarEffects } = useScrollDown();
     const { isMobileScreen, handleClick, nav_transition } = useMobileScreen();
-
-    type ClassValue = string | false | null | undefined;
-
-    function classNames(...classes: ClassValue[]): string {
-        return classes.filter(Boolean).join(" ");
-    }
 
     return (
         <>
@@ -44,45 +38,10 @@ export const Header = () => {
                                         </div>
                                     </>
                                     :
-                                    <>
-                                        <nav className={style.nav_menu}>
-                                            <ul>
-                                                {
-                                                    HEADER_ENV.NAV_LINK.map((item) => (
-                                                        <li key={item.id}>
-                                                            <NavLink className={({ isActive }) =>
-                                                                classNames(
-                                                                    isActive && style.item_active,
-                                                                    style.item
-                                                                )
-                                                            } to={item.path} end>
-                                                                {item.label}
-                                                            </NavLink>
-                                                        </li>
-                                                    ))
-                                                }
-                                            </ul>
-                                        </nav>
-                                    </>
+                                    <NavElements.HeaderMenu style={style} />
                             }
                         </div>
-                        {
-                            !isMobileScreen() &&
-                            <div className={style.nav_buttons}>
-                                <div className={style.contact_button}>
-                                    <button>
-                                        Contacto
-                                        <span><FontAwesomeIcon icon={faEnvelope} /></span>
-                                    </button>
-                                </div>
-                                <div className={style.whats_button}>
-                                    <button>
-                                        WhatsApp
-                                        <span><FontAwesomeIcon icon={faWhatsapp} /></span>
-                                    </button>
-                                </div>
-                            </div>
-                        }
+                        <NavElements.HeaderNavButtons style={style} />
                     </div>
                 </div>
             </motion.nav>
@@ -94,25 +53,14 @@ export const Header = () => {
                             <div className={style.display_pages}>
                                 <h2>Secciones</h2>
                                 <ul>
-                                    <li onClick={() => {
-                                        handleClick()
-                                    }}><p>Inicio</p></li>
-                                    <li onClick={() => {
-                                        handleClick()
-                                    }}><p>Servicios</p></li>
-                                    <li onClick={() => {
-                                        handleClick()
-                                    }}><p>Paquetes</p></li>
-                                    <li onClick={() => {
-                                        handleClick()
-                                    }}><p>Contacto</p>
-                                        <span><FontAwesomeIcon icon={faEnvelope} /></span>
-                                    </li>
-                                    <li onClick={() => {
-                                        handleClick()
-                                    }}><p>WhatsApp</p>
-                                        <span><FontAwesomeIcon icon={faWhatsapp} /></span>
-                                    </li>
+                                    {MOBILE_MENU.map((item, index) => (
+                                        <li key={index} onClick={handleClick}>
+                                            <NavLink to={item.href}>
+                                                <span><FontAwesomeIcon icon={item.icon} /></span>
+                                                <p>{item.label}</p>
+                                            </NavLink>
+                                        </li>
+                                    ))}
                                 </ul>
                                 <div className={style.button_wrapper_mobile}>
                                     <button onClick={() => handleClick()}>Cerrar Menú</button>

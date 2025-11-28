@@ -18,10 +18,14 @@
     --hero-p-font-size: #{const.$hero-p-font-size};
     --hero-button-font-size: #{const.$hero-button-font-size};
     --hero-height: #{const.$hero-height};
+    --service-description-font-size: #{const.$service-description-font-size};
+    --tech-grid-grid-template-columns: #{const.$tech-grid-grid-template-columns};
 }
 
 @include mobile {
     :root {
+        --tech-grid-grid-template-columns: #{const.$tech-grid-grid-template-columns-mobile};
+        --service-description-font-size: #{const.$service-description-font-size-mobile};
         --hero-h1-font-size: #{const.$hero-h1-font-size-mobile};        
         --hero-p-font-size: #{const.$hero-p-font-size-mobile};
         --hero-button-font-size: #{const.$hero-button-font-size-mobile};

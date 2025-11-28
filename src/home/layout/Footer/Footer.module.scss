@@ -1,5 +1,6 @@
 @forward '/src/scss/base/main-root-values';
 @use '/src/scss/styles/' as *;
+@forward '/src/scss/mobile/layout/footer-mobile/';
 
 .footer_background {
     background-color: rgb(28, 28, 28);
@@ -13,6 +14,8 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    font-family: var(--main-font-family-open-roboto);
+    color: #fff;
 }
 
 .footer_wrapper {
@@ -28,8 +31,7 @@
     margin: 0;
     justify-items: center;
     align-items: start;
-    color: #fff;
-    font-family: var(--main-font-family-open-roboto);
+    padding: 2ex;
 }
 
 .footer_icon {

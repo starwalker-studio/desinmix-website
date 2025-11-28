@@ -1,7 +1,7 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLightbulb, faMobileScreenButton, faLaptop, faShield } from '@fortawesome/free-solid-svg-icons';
 import { CONTENT } from "../content.env";
-import type { TechElementsProps } from "../index.types";
+import type { TechElementsProps } from "../types/index.types";
 
 export const TechElements = ({ style }: TechElementsProps) => {
 

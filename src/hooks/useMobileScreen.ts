@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import type { isMobileScreenType, handleClick, navTransitionType } from "./useMobileScreen.type";
+import type { isMobileScreenType, handleClick, navTransitionType } from "./types/useMobileScreen.type";
 import { HEADER_ENV } from "../env/header.env";
 
 

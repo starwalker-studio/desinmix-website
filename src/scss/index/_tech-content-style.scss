@@ -1,6 +1,7 @@
 @forward 'index-root-values';
 @forward '../base/';
 @use '../styles/index' as *;
+@use '../utils/' as *;
 
 .container {
     @include index-container-style;
@@ -8,6 +9,7 @@
 
 .content {
     @include index-content-style;
+    padding: 2ex;
 }
 
 .tech_section {
@@ -20,7 +22,7 @@
 
 .tech_grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    grid-template-columns: var(--tech-grid-grid-template-columns);
     gap: 3rem;
     width: 100%;
     margin: 0 auto;
@@ -61,12 +63,6 @@
     }
 }
 
-@media (max-width: 768px) {
-    .tech_grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 .green_background {
     background: #095B29;
     background: var(--green-gradient-background);
@@ -75,6 +71,9 @@
 
 .header_tech {
     @include header-services;
+    @include mobile {
+        font-size: 1.48ex;
+    }
 }
 
 .tech_wrapper {

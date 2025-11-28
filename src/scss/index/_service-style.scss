@@ -44,6 +44,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 2ex;
 
     @media (max-width: 992px) {
         grid-template-columns: 1fr;
@@ -53,7 +54,7 @@
     .text {
         font-family: var(--service-font-family);
         color: #fff;
-        font-size: 1.85rem;
+        font-size: var(--service-description-font-size);
         line-height: 1.5;
         font-weight: 480;
         max-width: 1030px;

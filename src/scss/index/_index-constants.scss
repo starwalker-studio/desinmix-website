@@ -4,13 +4,19 @@ $overlay-background: #dfd9d725;
 $service-text-shadow: 0 3px 22px rgba(0, 0, 0, 0.863);
 $green-gradient-background: linear-gradient(180deg, rgba(9, 91, 41, 1) 0%, rgba(17, 147, 70, 1) 100%);
 $drop-shadow-filter: drop-shadow(0 8px 10px rgba(0, 0, 0, 0.30)) drop-shadow(0 3px 5px rgba(0, 0, 0, 0.20));
+// Hero section
 $hero-overlay-background: linear-gradient(0deg, rgba(4, 20, 47, 0.62) 0%, rgba(4, 20, 47, 1) 100%);
 $hero-background-image: url('/index/hero/hero-index.jpg');
 $hero-h1-font-size: 2.8rem;
 $hero-p-font-size: 1.5rem;
 $hero-button-font-size: 1.4rem;
 $hero-height: 102vh;
+// content section
+$service-description-font-size: 1.85rem;
+$tech-grid-grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
 // mobile values
+$tech-grid-grid-template-columns-mobile: 1fr;
+$service-description-font-size-mobile: 1.25rem;
 $hero-h1-font-size-mobile: 2rem;
 $hero-p-font-size-mobile: 1.2rem;
 $hero-button-font-size-mobile: 1rem;

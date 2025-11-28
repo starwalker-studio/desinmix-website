@@ -1,4 +1,4 @@
-@forward '/src/scss/mobile/layout/header/';
+@forward '/src/scss/mobile/layout/header-mobile/';
 @forward '/src/scss/base/index';
 @forward '/src/scss/mobile/';
 @use '/src/scss/styles/' as *;
@@ -9,6 +9,7 @@
     top: 0;
     z-index: 999;
     backdrop-filter: blur(8px);
+    font-family: var(--main-font-family-open-oswald);
 }
 
 .nav_container {
@@ -70,7 +71,6 @@
             margin-left: 2ex;
             margin-right: 2ex;
             text-transform: uppercase;
-            font-family: var(--main-font-family-open-oswald);
             font-weight: 430;
             line-height: 1.825;
 
@@ -104,7 +104,7 @@
             margin-left: 8px;
         }
 
-        @include header-button-style(#ee8738, #f59d5a, 1.78ex, 540, #83481b, #fff);
+        @include header-button-style(#ee8738, #f59d5a, 1.78ex, 440, #83481b, #fff);
     }
 
     .whats_button {
@@ -112,6 +112,6 @@
             margin-left: 8px;
         }
 
-        @include header-button-style(#25D366, #64f599, 1.78ex, 540, #147538, #fff);
+        @include header-button-style(#25D366, #64f599, 1.78ex, 440, #147538, #fff);
     }
 }

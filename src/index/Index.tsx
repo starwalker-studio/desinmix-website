@@ -4,10 +4,10 @@ export const Index = () => {
   return (
     <>
       <Section.Hero />
-      {/* <Section.Description />
+      <Section.Description />
       <Section.Tech />
       <Section.SInfo />
-      <Section.ContactUs /> */}
+      <Section.ContactUs />
     </>
   )
 }

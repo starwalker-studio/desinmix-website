@@ -29,3 +29,11 @@ export interface IFOOTER {
         FOOTER_END: string
     }
 }
+
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
+export interface IMOBILE_MENU {
+    icon: IconDefinition;
+    label: string;
+    href: string;
+}
