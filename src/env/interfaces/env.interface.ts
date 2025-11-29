@@ -1,9 +1,10 @@
+import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 export interface IHEADER_ENV {
     readonly HEADER: {
         readonly MAX_MOBILE_WIDTH: number
         readonly LOGO: string
     }
-    readonly NAV_LINK: {id:number, label: string, path: string}[]
+    readonly NAV_LINK: { id: number, label: string, path?: string, dropdown?: { id: number, label: string, path: string }[], icon?: IconDefinition; }[]
 }
 
 export interface ICONTENT {
@@ -29,8 +30,6 @@ export interface IFOOTER {
         FOOTER_END: string
     }
 }
-
-import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 
 export interface IMOBILE_MENU {
     icon: IconDefinition;

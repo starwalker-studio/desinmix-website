@@ -1,19 +1,20 @@
 import { Routes, Route } from "react-router";
 import { Index } from "../index/Index";
-import { Header } from "../home/layout/Header/Header";
-import { Footer } from "../home/layout/Footer/Footer";
+import { ServicesRoutes } from "./services-routes/ServicesRoutes";
 
 export const DesinmixRoutes = () => {
     return (
         <>
             <Routes>
+                <Route path="/" element={<Index />} />
                 <Route
-                    path="/"
-                    element={<>
-                        <Header />
-                        <Index />
-                        <Footer />
-                    </>} />
+                    path="/servicios*"
+                    element={
+                        <>
+                            <ServicesRoutes />
+                        </>
+                    }
+                />
             </Routes>
         </>
     )

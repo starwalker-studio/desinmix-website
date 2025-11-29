@@ -1,4 +1,4 @@
-import { faHome, faGlobe, faSuitcase, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faHome, faGlobe, faSuitcase, faEnvelope, faCaretDown } from '@fortawesome/free-solid-svg-icons';
 import { faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import type { IHEADER_ENV, IMOBILE_MENU } from "./interfaces/env.interface";
 
@@ -9,7 +9,14 @@ export const HEADER_ENV: IHEADER_ENV = {
     },
     NAV_LINK: [
         { id: 1, label: "Inicio", path: "/" },
-        { id: 2, label: "Servicios", path: "/servicios" },
+        {
+            id: 2, label: "Servicios", dropdown: [
+                { id: 1, label: "Diseño páginas web", path: "/servicios/diseno-web" },
+                { id: 2, label: "Aplicaciones web PHP", path: "/servicios/aplicaciones-web" },
+                { id: 3, label: "Sitio web autoadministrable", path: "/servicios/sitio-autoadministrable" },
+                { id: 4, label: "Diseño e-commerce", path: "/servicios/diseno-e-commerce" },
+            ], icon: faCaretDown
+        },
         { id: 3, label: "Paquetes", path: "/paquetes" },
     ]
 }
