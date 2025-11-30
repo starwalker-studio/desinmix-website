@@ -1,0 +1,5 @@
+@use 'constants' as const;
+
+:root {
+    --services-hero-background-image: #{const.$services-hero-background-image};
+}

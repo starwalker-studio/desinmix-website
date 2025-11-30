@@ -1,4 +1,5 @@
 import type { IconDefinition } from '@fortawesome/fontawesome-svg-core';
+
 export interface IHEADER_ENV {
     readonly HEADER: {
         readonly MAX_MOBILE_WIDTH: number
@@ -35,4 +36,16 @@ export interface IMOBILE_MENU {
     icon: IconDefinition;
     label: string;
     href: string;
+}
+
+type IServiceItem = {
+  id: number
+  title: string
+  description: string
+}
+
+export interface ISERVICES {
+  title: string
+  introduction: string
+  services: IServiceItem[]
 }
