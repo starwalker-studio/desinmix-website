@@ -1,0 +1,60 @@
+@forward "/src/scss/base";
+@forward '/src/scss/components/design-services/';
+@forward '/src/scss/components/design-services/main-hero-services/';
+
+.sub_header {
+  margin-top: 9.8ex;
+  margin-bottom: 8ex;
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  p {
+    font-size: 1.3rem;
+  }
+}
+
+.web_develop_phrase_container {
+  margin-top: 9ex;
+  margin-bottom: 6ex;
+  padding-left: 2ex;
+  padding-right: 2ex;
+  font-family: var(--main-font-family-open-roboto);
+}
+
+.web_develop_note {
+  text-align: center;
+  padding: 1ex;
+
+  .note_title {
+    h3 {
+      font-style: italic;
+      font-size: 1.5rem;
+      font-weight: 350;
+    }
+  }
+}
+
+.phrases_list_grid {
+  padding: 2ex;
+  margin-bottom: 4ex;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 3ex;
+  justify-items: center;
+  text-align: center;
+
+  ul {
+    list-style: none;
+  }
+
+  p {
+    font-size: 2ex;
+  }
+
+  span {
+    font-size: 4ex;
+  }
+}

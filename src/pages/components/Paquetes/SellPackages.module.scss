@@ -1,0 +1,11 @@
+@forward "/src/scss/components/design-services/main-hero-services/";
+@forward '/src/scss/components/design-services/';
+@forward "/src/scss/base";
+@use "/src/scss/styles/" as *;
+
+
+.sell_packages_wrapper {
+  padding-top: 2.8ex;
+  padding-bottom: 2.8ex;
+  max-width: 1680px;
+}

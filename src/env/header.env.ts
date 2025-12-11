@@ -12,9 +12,9 @@ export const HEADER_ENV: IHEADER_ENV = {
         {
             id: 2, label: "Servicios", dropdown: [
                 { id: 1, label: "Diseño páginas web", path: "/servicios/diseno-web" },
-                { id: 2, label: "Aplicaciones web PHP", path: "/servicios/aplicaciones-web" },
+                { id: 2, label: "Desarrollo Web", path: "/servicios/desarrollo-web" },
                 { id: 3, label: "Sitio web autoadministrable", path: "/servicios/sitio-autoadministrable" },
-                { id: 4, label: "Diseño e-commerce", path: "/servicios/diseno-e-commerce" },
+                { id: 4, label: "Tienda Virtual", path: "/servicios/tienda-virtual" },
             ], icon: faCaretDown
         },
         { id: 3, label: "Paquetes", path: "/paquetes" },

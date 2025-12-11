@@ -1,57 +1,54 @@
-@use '/src/scss/styles/' as *;
-@forward '/src/scss/index/index-root-values';
-@forward '/src/scss/base/';
+@use "/src/scss/styles/" as *;
+@forward "/src/scss/index/index-root-values";
+@forward "/src/scss/base/";
+@forward "/src/scss/styles/";
 
 .hero {
-    position: relative;
-    width: 100%;
-    height: var(--hero-height);
-    min-height: 600px;
-
-    background-image: var(--hero-background-image);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  @include background-section-style;
+  background-image: var(--hero-background-image);
+  height: var(--hero-height);
 }
 
 .overlay {
-    position: absolute;
-    inset: 0;
-    background: var(--hero-overlay-background);
+  @include overlay-style;
 }
 
 .content {
-    position: relative;
-    z-index: 2;
-    color: var(--main-white-color);
-    max-width: 1050px;
-    font-family: var(--main-font-family-open-roboto);
-    text-align: center;
-    padding: 1ex;
+  position: relative;
+  z-index: 2;
+  color: var(--main-white-color);
+  max-width: 1050px;
+  font-family: var(--main-font-family-open-roboto);
+  text-align: center;
+  padding: 1ex;
 
-    h1 {
-        font-size: var(--hero-h1-font-size);
-        font-weight: 700;
-        margin-bottom: 15px;
-        line-height: 1.4;
-        text-transform: uppercase;
-    }
+  h1 {
+    font-size: var(--hero-h1-font-size);
+    font-weight: 700;
+    margin-bottom: 15px;
+    line-height: 1.4;
+    text-transform: uppercase;
+  }
 
-    p {
-        font-size: var(--hero-p-font-size);
-        margin-bottom: 38px;
-        opacity: 0.9;
-    }
+  p {
+    font-size: var(--hero-p-font-size);
+    margin-bottom: 38px;
+    opacity: 0.9;
+  }
 
-    .hero_button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+  .hero_button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
-        @include button-style(#eff1f5, #04142f, var(--hero-button-font-size), 600, 40%, #D9762B, #eff1f5);
-    }
+    @include button-style(
+      #eff1f5,
+      #04142f,
+      var(--hero-button-font-size),
+      600,
+      40%,
+      #d9762b,
+      #eff1f5
+    );
+  }
 }

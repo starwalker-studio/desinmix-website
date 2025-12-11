@@ -1,6 +1,6 @@
 @forward 'index-root-values';
 @forward '../base/main-root-values';
-@use '../styles/index' as *;
+@use '../styles/' as *;
 @use '../utils/' as *;
 
 .info_container {

@@ -1,0 +1,47 @@
+@forward "/src/scss/base";
+@forward "/src/scss/components";
+@use "/src/scss/styles/" as *;
+
+.hero_section {
+  @include background-section-style;
+  background: var(--services-hero-background-image);
+  font-family: var(--main-font-family-open-oswald);
+}
+
+.overlay {
+  @include overlay-style;
+}
+
+.hero_container {
+  @include container-style;
+}
+
+.hero_wrapper {
+  @include wrapper-style;
+}
+
+.hero_content {
+  color: #fff;
+  position: relative;
+  z-index: 2;
+  padding: 2rem;
+
+  .hero_header {
+    text-align: center;
+
+    h2 {
+      @include h2-header-content-style;
+    }
+  }
+
+  .hero_text {
+    display: flex;
+    justify-content: center;
+    text-align: start;
+    padding: 1ex;
+
+    p {
+      @include p-text-content-style;
+    }
+  }
+}

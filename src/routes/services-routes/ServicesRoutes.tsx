@@ -6,6 +6,9 @@ export const ServicesRoutes = () => {
         <>
             <Routes>
                 <Route path="/diseno-web" element={<Services.WebDesign />} />
+                <Route path="/desarrollo-web" element={<Services.WebDevelop />} />
+                <Route path="/sitio-autoadministrable" element={<Services.SitioWebAuto />} />
+                <Route path="/tienda-virtual" element={<Services.ECommerce />} />
             </Routes>
         </>
     )

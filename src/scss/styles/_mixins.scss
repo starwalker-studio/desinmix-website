@@ -1,108 +1,233 @@
 @mixin index-container-style {
-    position: relative;
-    z-index: 2;
-    width: 100%;
-    display: flex;
-    justify-content: center;
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  scroll-behavior: smooth;
 }
 
 @mixin index-content-style {
-    width: 100%;
-    max-width: 1400px;
-    padding: 0 15px;
+  width: 100%;
+  max-width: 1400px;
+  padding: 0 15px;
 }
 
 @mixin index-max-width {
-    max-width: 1200px;
+  max-width: 1200px;
 }
 
 @mixin info_grid($v1, $v2) {
-    display: grid;
-    grid-template-columns: repeat($v1, $v2);
-    gap: 3rem;
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    justify-items: center;
-    align-items: center;
-    padding: 2rem;
+  display: grid;
+  grid-template-columns: repeat($v1, $v2);
+  gap: 3rem;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  justify-items: center;
+  align-items: center;
+  padding: 2rem;
 }
 
 @mixin header-services {
-    padding-top: 12ex;
-    text-align: center;
+  padding-top: 12ex;
+  text-align: center;
 
-    h2 {
-        font-size: 2.65em;
-        text-transform: uppercase;
-        font-weight: 700;
-    }
+  h2 {
+    font-size: 2.65em;
+    text-transform: uppercase;
+    font-weight: 700;
+  }
 }
 
-@mixin button-style($b-color, $text-color, $font-size, $font-weight, $width, $b-hover, $h-color) {
-    button {
-        background: $b-color;
-        color: $text-color;
-        border: none;
-        padding: 12px 28px;
-        border-radius: 6px;
-        font-size: $font-size;
-        width: $width;
-        cursor: pointer;
-        font-weight: $font-weight;
-        transition: 0.4s all ease;
+@mixin button-style(
+  $b-color,
+  $text-color,
+  $font-size,
+  $font-weight,
+  $width,
+  $b-hover,
+  $h-color
+) {
+  button {
+    background: $b-color;
+    color: $text-color;
+    border: none;
+    padding: 12px 28px;
+    border-radius: 6px;
+    font-size: $font-size;
+    width: $width;
+    cursor: pointer;
+    font-weight: $font-weight;
+    transition: 0.4s all ease;
 
-        &:hover {
-            color: $h-color;
-            background: $b-hover;
-        }
+    &:hover {
+      color: $h-color;
+      background: $b-hover;
     }
+  }
 }
 
-@mixin header-button-style($b-color, $text-color, $font-size, $font-weight, $b-hover, $h-color) {
-    button {
-        background: transparent;
-        color: $text-color;
-        border: solid 1px $b-color;
-        padding: 9px 28px;
-        border-radius: 6px;
-        font-size: $font-size;
-        width: 100%;
-        cursor: pointer;
-        font-weight: $font-weight;
-        transition: 0.3s all ease-in-out;
-        text-transform: uppercase;
+@mixin header-button-style(
+  $b-color,
+  $text-color,
+  $font-size,
+  $font-weight,
+  $b-hover,
+  $h-color
+) {
+  button {
+    background: transparent;
+    color: $text-color;
+    border: solid 1px $b-color;
+    padding: 9px 28px;
+    border-radius: 6px;
+    font-size: $font-size;
+    width: 100%;
+    cursor: pointer;
+    font-weight: $font-weight;
+    transition: 0.3s all ease-in-out;
+    text-transform: uppercase;
 
-        &:hover {
-            border: solid 1px transparent;
-            color: $h-color;
-            background: $b-hover;
-        }
+    &:hover {
+      border: solid 1px transparent;
+      color: $h-color;
+      background: $b-hover;
     }
+  }
 }
 
 @mixin button-navbar-mobile {
-    background: transparent;
-    border: 2px solid;
-    border-top-color: currentcolor;
-    border-right-color: currentcolor;
-    border-bottom-color: currentcolor;
-    border-left-color: currentcolor;
-    color: inherit;
-    cursor: pointer;
-    display: inline-block;
-    font-family: inherit;
-    font-size: 12px;
-    letter-spacing: inherit;
-    letter-spacing: 1.5px;
-    line-height: 1;
-    max-width: 100%;
-    overflow: hidden;
-    padding: 15px 30px;
-    text-align: center;
-    text-decoration: none;
-    text-overflow: ellipsis;
-    text-transform: uppercase;
-    transition: all .4s ease;
-    white-space: nowrap;
+  background: transparent;
+  border: 2px solid;
+  border-top-color: currentcolor;
+  border-right-color: currentcolor;
+  border-bottom-color: currentcolor;
+  border-left-color: currentcolor;
+  color: inherit;
+  cursor: pointer;
+  display: inline-block;
+  font-family: inherit;
+  font-size: 12px;
+  letter-spacing: inherit;
+  letter-spacing: 1.5px;
+  line-height: 1;
+  max-width: 100%;
+  overflow: hidden;
+  padding: 15px 30px;
+  text-align: center;
+  text-decoration: none;
+  text-overflow: ellipsis;
+  text-transform: uppercase;
+  transition: all 0.4s ease;
+  white-space: nowrap;
+}
+
+@mixin overlay-style {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(4, 20, 47, 0.62) 0%,
+    rgba(4, 20, 47, 1) 100%
+  );
+}
+
+@mixin background-section-style {
+  position: relative;
+  width: 100%;
+  min-height: 600px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  scroll-behavior: smooth;
+}
+
+@mixin container-style {
+  padding-left: 4rem;
+  padding-right: 4rem;
+  margin: 0;
+}
+
+@mixin wrapper-style {
+  padding-top: 2.8ex;
+  padding-bottom: 2.8ex;
+  max-width: 1490px;
+}
+
+@mixin h2-header-content-style {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+@mixin p-text-content-style {
+  line-height: 1.3;
+  font-size: 2.8ex;
+  font-weight: 500;
+}
+
+@mixin packages-grid-template-style($v1, $v2) {
+  display: grid;
+  grid-template-columns: repeat($v1, minmax(260px, $v2));
+  justify-content: center;
+  gap: 2rem;
+  padding: 2ex;
+  margin: 0 auto;
+}
+
+@mixin description-column-style {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.233);
+  padding: 8ex 4ex 8ex 4ex;
+  border-radius: 20px;
+  background: #fff;
+  width: 100%;
+}
+
+@mixin column-header-style {
+  font-size: 1.5rem;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  font-weight: 760;
+  color: #413a3a;
+}
+
+@mixin column-price-style {
+  padding-top: 2px;
+  padding-bottom: 2px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #021835c9;
+}
+
+@mixin column-price-span-style($size) {
+  font-weight: 420;
+  font-size: $size;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@mixin column-price-text-style($size) {
+  font-weight: 600;
+  margin: 0;
+  font-size: $size;
+}
+
+@mixin details-list-style($right, $left) {
+  padding-right: $right;
+  padding-left: $left;
+  font-size: 0.8rem;
+  font-weight: 500;
+}
+
+@mixin quote-button-style {
+  padding-top: 5.4ex;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

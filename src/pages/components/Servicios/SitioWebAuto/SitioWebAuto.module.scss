@@ -1,0 +1,52 @@
+@forward "/src/scss/base";
+@forward '/src/scss/components/design-services/';
+@forward '/src/scss/components/design-services/main-hero-services/';
+
+.sub_header {
+  font-family: var(--main-font-family-open-roboto);
+  margin-top: 12.8ex;
+  margin-bottom: 8ex;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  h2 {
+    text-align: center;
+    margin: 0;
+    font-size: 1.7rem;
+    font-weight: 700;
+  }
+  p {
+    font-style: italic;
+    font-size: 1.3rem;
+  }
+  .benefits_list {
+    padding: 2ex;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .ul_list {
+      display: flex;
+      flex-direction: column;
+      justify-content: start;
+      align-content: center;
+      ul {
+        padding-left: 0;
+        list-style: none;
+        padding: 0;
+      }
+      li {
+        font-weight: 700;
+        font-size: 1.23rem;
+        display: flex;
+        align-items: center;
+        color: #353535;
+      }
+      span {
+        font-size: 2rem;
+        margin-right: 2ex;
+        color: #a0a0a0;
+      }
+    }
+  }
+}

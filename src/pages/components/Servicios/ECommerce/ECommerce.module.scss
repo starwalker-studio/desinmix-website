@@ -1,0 +1,49 @@
+@forward "/src/scss/base";
+@forward '/src/scss/components/design-services/';
+@forward '/src/scss/components/design-services/main-hero-services/';
+
+.sub_content_grid {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
+
+.sub_content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-left: 8ex;
+  padding-right: 8ex;
+  margin-top: 3.8ex;
+  margin-bottom: 3.8ex;
+  font-family: var(--main-font-family-open-roboto);
+}
+
+.sub_header {
+  .title_icon {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    h2 {
+      text-align: center;
+      margin: 0;
+      font-size: 1.7rem;
+      font-weight: 700;
+      color: #6e4b24;
+    }
+    span {
+      color: #522c0173;
+      padding: 0;
+      margin-right: 1.2ex;
+      font-size: 1.8rem;
+    }
+  }
+  .text_content {
+    padding-left: 3.6rem;
+    p {
+      font-weight: 500;
+      font-size: 1.18rem;
+    }
+  }
+}

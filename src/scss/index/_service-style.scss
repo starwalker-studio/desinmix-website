@@ -1,17 +1,10 @@
 @forward 'index-root-values';
-@use '../styles/index' as *;
+@use '../styles/' as *;
 
 .tech_background {
-    position: relative;
+    @include background-section-style;
     background-image: var(--tech-background-background-image);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
     padding: 8rem 0;
-    min-height: 600px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     overflow: hidden;
     background-attachment: fixed;
 
