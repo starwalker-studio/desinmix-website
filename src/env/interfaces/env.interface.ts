@@ -145,3 +145,8 @@ export interface ISERVICES_WEB_PACKAGES {
   description: string;
   includes: { id: number; text: string }[];
 }
+
+export interface ICONTACT_SECTION_CONTENT {
+  title: string;
+  description: string;
+}

@@ -1,23 +1,10 @@
 import { faCircleCheck } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { usePriceFormat } from "../../hooks/usePriceFormat";
-
-type DisplayColumnDataProps = {
-  data: {
-    id: number;
-    key: string;
-    title: string;
-    price: number;
-    description?: string;
-    shortDescription?: string;
-    includes: {
-      id: number;
-      text: string;
-    }[];
-  }[];
-  style: CSSModuleClasses;
-  isColumnLarge?: boolean;
-};
+import type { DisplayColumnDataProps } from "../../env/types/column-data-types";
+// import { useContactLink } from "../../hooks/useContactLink";
+import { NavLink } from "react-router-dom";
+import { useSiteContext } from "../../context/hook/useSiteContext";
 
 export const DisplayColumnData = ({
   data,
@@ -25,6 +12,7 @@ export const DisplayColumnData = ({
   isColumnLarge = true,
 }: DisplayColumnDataProps) => {
   const { formatPrice } = usePriceFormat();
+  const { setPackageSelected } = useSiteContext();
   return (
     <>
       {data.map((item) => (
@@ -70,7 +58,12 @@ export const DisplayColumnData = ({
             </div>
           )}
           <div className={style.quote_button}>
-            <button>Cotizar</button>
+            <NavLink
+              to={"/contacto"}
+              onClick={() => setPackageSelected(item.title)}
+            >
+              <button>Cotizar</button>
+            </NavLink>
           </div>
         </div>
       ))}

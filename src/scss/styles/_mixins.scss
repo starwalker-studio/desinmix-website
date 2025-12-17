@@ -49,6 +49,11 @@
   $b-hover,
   $h-color
 ) {
+  a {
+    transition: 0.3s all ease-in-out;
+    text-decoration: none;
+    color: $text-color;
+  }
   button {
     background: $b-color;
     color: $text-color;
@@ -76,6 +81,11 @@
   $b-hover,
   $h-color
 ) {
+  a {
+    transition: 0.3s all ease-in-out;
+    text-decoration: none;
+    color: $text-color;
+  }
   button {
     background: transparent;
     color: $text-color;
