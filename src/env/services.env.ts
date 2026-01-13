@@ -90,6 +90,7 @@ export const WEB_DEVELOP: IWEB_DEVELOP_CONTENT = {
       id: 1,
       key: "pro",
       title: "Desarrollo web básico",
+      selected_id: 1,
       price: 7500,
       includes: [
         { id: 1, text: "Panel de administración intuitivo" },
@@ -113,6 +114,7 @@ export const WEB_DEVELOP: IWEB_DEVELOP_CONTENT = {
       id: 2,
       key: "premium",
       title: "Desarrollo web avanzado",
+      selected_id: 2,
       price: 12800,
       includes: [
         { id: 1, text: "Panel de administración intuitivo" },
@@ -208,6 +210,7 @@ export const WEBSITE_ADMIN_PACKAGES: IWEBSITE_ADMIN_PACKAGES[] = [
     id: 1,
     key: "corporativo",
     title: "CORPORATIVO",
+    selected_id: 3,
     price: 16500,
     subtitle:
       "Pensado para empresas consolidadas que requieren mayor estructura y presencia digital",
@@ -233,6 +236,7 @@ export const WEBSITE_ADMIN_PACKAGES: IWEBSITE_ADMIN_PACKAGES[] = [
     id: 2,
     key: "negocio-pro",
     title: "NEGOCIO PRO",
+    selected_id: 4,
     price: 9800,
     subtitle:
       "Ideal para negocios que desean crecer y mantener su contenido actualizado",
@@ -261,6 +265,7 @@ export const WEBSITE_ADMIN_PACKAGES: IWEBSITE_ADMIN_PACKAGES[] = [
     id: 3,
     key: "premium",
     title: "PREMIUM",
+    selected_id: 5,
     price: 18500,
     subtitle:
       "Para corporativos, instituciones o proyectos en crecimiento que requieren funciones avanzadas",
@@ -311,6 +316,7 @@ export const ECOMMERCE_PACKAGES: IECOMMERCE_PACKAGES[] = [
     id: 1,
     key: "pro",
     title: "Tienda Virtual Pro",
+    selected_id: 6,
     price: 14800,
     currency: "MXN",
     includes: [
@@ -341,6 +347,7 @@ export const ECOMMERCE_PACKAGES: IECOMMERCE_PACKAGES[] = [
     id: 2,
     key: "premium",
     title: "Tienda Virtual Premium",
+    selected_id: 7,
     price: 18800,
     currency: "MXN",
     includes: [

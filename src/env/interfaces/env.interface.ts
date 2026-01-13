@@ -69,6 +69,7 @@ export interface IWEB_DEVELOP_CONTENT {
     id: number;
     key: string;
     title: string;
+    selected_id: number;
     price: number;
     includes: { id: number; text: string }[];
   }[];
@@ -97,6 +98,7 @@ export interface IWEBSITE_ADMIN_PACKAGES {
   id: number;
   key: string;
   title: string;
+  selected_id: number;
   price: number;
   subtitle: string;
   description?: string;
@@ -123,6 +125,7 @@ export interface IECOMMERCE_PACKAGES {
   id: number;
   key: string;
   title: string;
+  selected_id: number;
   price: number;
   currency: string;
   includes: {
@@ -139,6 +142,7 @@ export interface IPACKAGES_INTRO {
 export interface ISERVICES_WEB_PACKAGES {
   id: number;
   title: string;
+  selected_id: number;
   price: number;
   key: string;
   shortDescription: string;
@@ -149,4 +153,11 @@ export interface ISERVICES_WEB_PACKAGES {
 export interface ICONTACT_SECTION_CONTENT {
   title: string;
   description: string;
+  data: { id: number; info: string; icon: IconDefinition }[];
+}
+
+export interface IPACKAGE_OPTIONS {
+  id: number;
+  label: string;
+  value: string;
 }

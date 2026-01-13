@@ -1,15 +1,19 @@
-import type { IPACKAGES_INTRO, ISERVICES_WEB_PACKAGES } from "./interfaces/env.interface";
+import type {
+  IPACKAGES_INTRO,
+  ISERVICES_WEB_PACKAGES,
+} from "./interfaces/env.interface";
 
 export const PACKAGES_INTRO: IPACKAGES_INTRO = {
   title: "Soluciones web a tu medida",
   description:
-    "Nuestros paquetes combinan diseño, funcionalidad y tecnología para ayudarte a dar el siguiente paso digital. Desde páginas web informativas hasta sitios con administración de contenido, todos nuestros planes están diseñados para impulsar tu negocio y ayudarte a ofrecer una presencia digital profesional."
+    "Nuestros paquetes combinan diseño, funcionalidad y tecnología para ayudarte a dar el siguiente paso digital. Desde páginas web informativas hasta sitios con administración de contenido, todos nuestros planes están diseñados para impulsar tu negocio y ayudarte a ofrecer una presencia digital profesional.",
 };
 
 export const SERVICES_WEB_PACKAGES: ISERVICES_WEB_PACKAGES[] = [
   {
     id: 1,
     title: "BÁSICA",
+    selected_id: 8,
     price: 4800,
     key: "basico",
     shortDescription: "Sitio web estático sin funciones",
@@ -23,12 +27,13 @@ export const SERVICES_WEB_PACKAGES: ISERVICES_WEB_PACKAGES[] = [
       { id: 5, text: "Correo electrónico gratis" },
       { id: 6, text: "Optimización para buscadores Google" },
       { id: 7, text: "Enlaces a redes sociales o WhatsApp" },
-      { id: 8, text: "Carga rápida y certificado SSL" }
-    ]
+      { id: 8, text: "Carga rápida y certificado SSL" },
+    ],
   },
   {
     id: 2,
     title: "BÁSICA PRO",
+    selected_id: 9,
     price: 5300,
     key: "basico-pro",
     shortDescription: "Sitio web estático sin funciones",
@@ -42,12 +47,13 @@ export const SERVICES_WEB_PACKAGES: ISERVICES_WEB_PACKAGES[] = [
       { id: 5, text: "Correo electrónico gratis" },
       { id: 6, text: "Optimización para buscadores Google" },
       { id: 7, text: "Enlaces a redes sociales o WhatsApp" },
-      { id: 8, text: "Carga rápida y certificado SSL" }
-    ]
+      { id: 8, text: "Carga rápida y certificado SSL" },
+    ],
   },
   {
     id: 3,
     title: "NEGOCIO",
+    selected_id: 10,
     price: 7500,
     key: "negocio",
     shortDescription: "Sitio web estático sin funciones",
@@ -62,12 +68,13 @@ export const SERVICES_WEB_PACKAGES: ISERVICES_WEB_PACKAGES[] = [
       { id: 6, text: "Correo electrónico gratis" },
       { id: 7, text: "Optimización para buscadores Google" },
       { id: 8, text: "Enlaces a redes sociales o WhatsApp" },
-      { id: 9, text: "Carga rápida y certificado SSL" }
-    ]
+      { id: 9, text: "Carga rápida y certificado SSL" },
+    ],
   },
   {
     id: 4,
     title: "NEGOCIO PRO",
+    selected_id: 4,
     price: 9800,
     key: "negocio-pro",
     shortDescription: "Sitio web autoadministrable",
@@ -80,18 +87,19 @@ export const SERVICES_WEB_PACKAGES: ISERVICES_WEB_PACKAGES[] = [
       { id: 4, text: "Galería fotográfica, blog de noticias o catálogo" },
       {
         id: 5,
-        text: "Administrador de contenidos básico (galería, blog o catálogo)"
+        text: "Administrador de contenidos básico (galería, blog o catálogo)",
       },
       { id: 6, text: "Formulario de contacto" },
       { id: 7, text: "Correo electrónico gratis" },
       { id: 8, text: "Optimización para buscadores Google" },
       { id: 9, text: "Enlaces a redes sociales o WhatsApp" },
-      { id: 10, text: "Carga rápida y certificado SSL" }
-    ]
+      { id: 10, text: "Carga rápida y certificado SSL" },
+    ],
   },
   {
     id: 5,
     title: "INMOBILIARIA",
+    selected_id: 11,
     price: 15800,
     key: "inmobiliaria",
     shortDescription: "Sitio web autoadministrable",
@@ -103,26 +111,27 @@ export const SERVICES_WEB_PACKAGES: ISERVICES_WEB_PACKAGES[] = [
       { id: 3, text: "Diseño adaptable a dispositivos móviles o tablets" },
       {
         id: 4,
-        text: "Publicación de hasta 13 propiedades con detalles, imágenes y precios"
+        text: "Publicación de hasta 13 propiedades con detalles, imágenes y precios",
       },
       {
         id: 5,
-        text: "Filtro básico por propiedades, ubicación y precios"
+        text: "Filtro básico por propiedades, ubicación y precios",
       },
       {
         id: 6,
-        text: "Administrador de propiedades: agregar, editar o eliminar"
+        text: "Administrador de propiedades: agregar, editar o eliminar",
       },
       { id: 7, text: "Formulario de contacto" },
       { id: 8, text: "Correo electrónico gratis" },
       { id: 9, text: "Optimización para buscadores Google" },
       { id: 10, text: "Enlaces a redes sociales o WhatsApp" },
-      { id: 11, text: "Carga rápida y certificado SSL" }
-    ]
+      { id: 11, text: "Carga rápida y certificado SSL" },
+    ],
   },
   {
     id: 6,
     title: "PREMIUM",
+    selected_id: 5,
     price: 18500,
     key: "premium",
     shortDescription: "Sitio web autoadministrable avanzado",
@@ -134,14 +143,14 @@ export const SERVICES_WEB_PACKAGES: ISERVICES_WEB_PACKAGES[] = [
       { id: 3, text: "Diseño adaptable a dispositivos móviles o tablets" },
       {
         id: 4,
-        text: "Sistema de gestión interno personalizado (reportes o herramientas)"
+        text: "Sistema de gestión interno personalizado (reportes o herramientas)",
       },
       { id: 5, text: "Administrador de contenidos completo" },
       { id: 6, text: "Formulario de contacto" },
       { id: 7, text: "Correo electrónico gratis" },
       { id: 8, text: "Optimización para buscadores Google" },
       { id: 9, text: "Enlaces a redes sociales o WhatsApp" },
-      { id: 10, text: "Carga rápida y certificado SSL" }
-    ]
-  }
+      { id: 10, text: "Carga rápida y certificado SSL" },
+    ],
+  },
 ];

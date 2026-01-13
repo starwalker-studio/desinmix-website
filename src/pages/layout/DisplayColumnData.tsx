@@ -60,7 +60,7 @@ export const DisplayColumnData = ({
           <div className={style.quote_button}>
             <NavLink
               to={"/contacto"}
-              onClick={() => setPackageSelected(item.title)}
+              onClick={() => setPackageSelected(item.selected_id)}
             >
               <button>Cotizar</button>
             </NavLink>

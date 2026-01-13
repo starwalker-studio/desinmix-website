@@ -3,6 +3,7 @@ export type DisplayColumnDataProps = {
     id: number;
     key: string;
     title: string;
+    selected_id: number;
     price: number;
     description?: string;
     shortDescription?: string;

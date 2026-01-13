@@ -1,4 +1,4 @@
 export interface SiteContextType {
-  selectedPackage: string;
-  setSelectedPackage: (name: string) => void;
+  selectedPackage: number | null;
+  setSelectedPackage: (id: number) => void;
 }
