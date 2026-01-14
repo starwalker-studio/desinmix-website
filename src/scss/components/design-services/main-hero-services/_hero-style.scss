@@ -1,6 +1,8 @@
 @forward "/src/scss/base";
 @forward "/src/scss/components";
+@forward "/src/scss/mobile/";
 @use "/src/scss/styles/" as *;
+@use "/src/scss/utils/" as *;
 
 .hero_section {
   @include background-section-style;
@@ -21,16 +23,20 @@
 }
 
 .hero_content {
+  margin-top: var(--hero-content-margin-top);
   color: #fff;
   position: relative;
   z-index: 2;
-  padding: 2rem;
+  padding: var(--hero-content-padding);
 
   .hero_header {
     text-align: center;
 
     h2 {
       @include h2-header-content-style;
+      @include mobile {
+        font-size: 1.6rem;
+      }
     }
   }
 
@@ -42,6 +48,9 @@
 
     p {
       @include p-text-content-style;
+      @include mobile {
+        font-size: 1.6ex;
+      }
     }
   }
 }

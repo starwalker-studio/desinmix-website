@@ -1,15 +1,19 @@
-@use 'mobile-constants' as const;
-@use '../utils/' as *;
+@use "mobile-constants" as const;
+@use "../utils/" as *;
 
 :root {
-    --mobile-navbar-background: #{const.$mobile-navbar-background};
-    --nav-wrapper-justify-content: #{const.$nav-wrapper-justify-content};
-    --icon-navbar-width: #{const.$icon-navbar-width};
+  --mobile-navbar-background: #{const.$mobile-navbar-background};
+  --nav-wrapper-justify-content: #{const.$nav-wrapper-justify-content};
+  --icon-navbar-width: #{const.$icon-navbar-width};
+  --hero-content-margin-top: #{const.$hero-content-margin-top};
+  --hero-content-padding: #{const.$hero-content-padding};
 }
 
 @include mobile {
-    :root {
-        --nav-wrapper-justify-content: #{const.$nav-wrapper-justify-content-mobile};
-        --icon-navbar-width: #{const.$icon-navbar-width-mobile};
-    }
+  :root {
+    --nav-wrapper-justify-content: #{const.$nav-wrapper-justify-content-mobile};
+    --icon-navbar-width: #{const.$icon-navbar-width-mobile};
+    --hero-content-margin-top: #{const.$hero-content-margin-top-mobile};
+    --hero-content-padding: #{const.$hero-content-padding-mobile};
+  }
 }

@@ -66,7 +66,7 @@ export const WEB_SERVICES_DESIGN: ISERVICES = {
 export const WEB_DEVELOP_SEO: IDESARROLLOWEBSEO = {
   title: "Desarrollo Web",
   description:
-    "Desarrollo de sistemas web, paneles administrativos y dashboards personalizados en PHP/Laravel. Creamos soluciones digitales a la medida que permiten a empresas y emprendedores gestionar inventarios, organizar información, automatizar procesos internos y mejorar su eficiencia operativa. Nuestros sistemas están diseñados para ser seguros, rápidos y fáciles de usar, con una interfaz intuitiva que facilita la administración del negocio sin depender de terceros. Cada plataforma es totalmente adaptable a las necesidades de tu empresa, permitiendo escalar funcionalidades como control de usuarios, reportes en tiempo real, gestión de productos, ventas, compras y más. Si estás buscando un sistema administrativo profesional, un dashboard personalizado o un desarrollo web en PHP/Laravel, te ayudamos a construir una herramienta robusta que mejore tus procesos y crezca contigo.",
+    "Desarrollo de sistemas web y paneles administrativos en PHP/Laravel, creados a la medida para optimizar procesos y mejorar la gestión de tu negocio. Diseñamos soluciones seguras, rápidas y fáciles de usar, que permiten administrar inventarios, productos, ventas y usuarios desde una interfaz intuitiva y escalable.",
   seoKeywords: [
     "desarrollo web",
     "sistemas administrativos",
