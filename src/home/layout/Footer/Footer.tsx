@@ -23,7 +23,7 @@ export const Footer = () => {
                                 {
                                     FOOTER_ENV.CONTENT.CONTACT_DETAILS.map((item, id) =>
                                         <ul key={id}>
-                                            <li>{item.link ? (<NavLink className={style.link} to={"/"}>{item.text}</NavLink>) : (item.text)}</li>
+                                            <li>{item.link ? (<NavLink className={style.link} to={"/contacto"}>{item.text}</NavLink>) : (item.text)}</li>
                                         </ul>
                                     )
                                 }

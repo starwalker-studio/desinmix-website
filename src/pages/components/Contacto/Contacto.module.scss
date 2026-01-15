@@ -1,5 +1,6 @@
 @use "/src/scss/styles/" as *;
 @forward "/src/scss/base";
+@use "/src/scss/utils/" as *;
 
 .contact_section {
   @include background-section-style;
@@ -23,11 +24,18 @@
   h2 {
     @include h2-header-content-style;
   }
+
+  @include mobile {
+    margin-top: 5.6rem;
+  }
 }
 
 .contact_content {
   color: #fff;
   padding: 3.8rem;
+  @include mobile {
+    padding: 1.5rem;
+  }
 }
 
 .contact_grid {
@@ -38,7 +46,11 @@
   max-width: 1200px;
   margin: 0 auto;
   justify-items: start;
-  //   align-items: center;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  
 }
 
 .contact_form {

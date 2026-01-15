@@ -1,6 +1,8 @@
 @forward "/src/scss/base";
 @forward '/src/scss/components/design-services/';
 @forward '/src/scss/components/design-services/main-hero-services/';
+@use "/src/scss/utils/" as *;
+@forward "/src/scss/mobile/";
 
 .sub_header {
   margin-top: 9.8ex;
@@ -8,11 +10,11 @@
   h2 {
     text-align: center;
     margin: 0;
-    font-size: 1.7rem;
+    font-size: var(--web-develop-subheader-font-size);
     font-weight: 700;
   }
   p {
-    font-size: 1.3rem;
+    font-size: var(--web-develop-p-font-size);
   }
 }
 
@@ -22,6 +24,9 @@
   padding-left: 2ex;
   padding-right: 2ex;
   font-family: var(--main-font-family-open-roboto);
+  @include mobile{
+    padding: 0;
+  }
 }
 
 .web_develop_note {
@@ -45,9 +50,15 @@
   gap: 3ex;
   justify-items: center;
   text-align: center;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 
   ul {
     list-style: none;
+    padding: 0;
   }
 
   p {

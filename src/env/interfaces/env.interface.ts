@@ -38,11 +38,19 @@ export interface IFOOTER {
   };
 }
 
-export interface IMOBILE_MENU {
-  icon: IconDefinition;
-  label: string;
-  href: string;
-}
+export type IMOBILE_MENU =
+  | {
+      icon: IconDefinition;
+      label: string;
+      href: string;
+      children?: never;
+    }
+  | {
+      icon: IconDefinition;
+      label: string;
+      children: { label: string; href: string }[];
+      href?: never;
+    };
 
 type IServiceItem = {
   id: number;

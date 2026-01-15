@@ -56,6 +56,7 @@ export const useMailForm = () => {
       timerProgressBar: true,
       willClose: () => {
         navigate("/");
+        
       },
     }).then((result) => {
       if (result.dismiss === Swal.DismissReason.timer) {

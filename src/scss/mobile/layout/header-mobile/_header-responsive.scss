@@ -113,3 +113,17 @@
         }
     }
 }
+
+.menu_item {
+    display: flex;
+}
+
+.submenu {
+  padding-left: 1rem;
+  margin-top: 0.5rem;
+}
+
+.submenu li {
+  padding: 0.5rem 0;
+  font-size: 0.9rem;
+}

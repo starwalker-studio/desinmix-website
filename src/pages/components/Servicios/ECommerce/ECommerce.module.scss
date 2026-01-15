@@ -1,6 +1,7 @@
 @forward "/src/scss/base";
 @forward '/src/scss/components/design-services/';
 @forward '/src/scss/components/design-services/main-hero-services/';
+@forward "/src/scss/mobile/";
 
 .sub_content_grid {
   display: flex;
@@ -13,8 +14,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-left: 8ex;
-  padding-right: 8ex;
+  padding-left: var(--sub-content-padding-left);
+  padding-right: var(--sub-content-padding-left);;
   margin-top: 3.8ex;
   margin-bottom: 3.8ex;
   font-family: var(--main-font-family-open-roboto);

@@ -224,7 +224,7 @@ export const WEBSITE_ADMIN_PACKAGES: IWEBSITE_ADMIN_PACKAGES[] = [
         id: 3,
         text: "Galería fotográfica, blog de noticias o catálogo administrable",
       },
-      { id: 4, text: "Administrador de contenidos" },
+      { id: 4, text: "Administrador de contenidos completo" },
       { id: 5, text: "Formulario de contacto" },
       { id: 6, text: "Correo electrónico profesional" },
       { id: 7, text: "Optimización SEO para Google" },
@@ -252,7 +252,7 @@ export const WEBSITE_ADMIN_PACKAGES: IWEBSITE_ADMIN_PACKAGES[] = [
       },
       {
         id: 4,
-        text: "Administrador de contenidos básico para galería, blog, catálogo o noticias",
+        text: "Administrador de contenidos básico",
       },
       { id: 5, text: "Formulario de contacto" },
       { id: 6, text: "Correo electrónico profesional" },

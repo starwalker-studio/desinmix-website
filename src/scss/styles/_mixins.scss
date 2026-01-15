@@ -1,3 +1,5 @@
+@use "/src/scss/utils/" as *;
+
 @mixin index-container-style {
   position: relative;
   z-index: 2;
@@ -160,6 +162,10 @@
   padding-left: 4rem;
   padding-right: 4rem;
   margin: 0;
+  @include mobile {
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
 }
 
 @mixin wrapper-style {
@@ -184,9 +190,15 @@
   display: grid;
   grid-template-columns: repeat($v1, minmax(260px, $v2));
   justify-content: center;
+  align-items: start;
   gap: 2rem;
   padding: 2ex;
   margin: 0 auto;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 @mixin description-column-style {

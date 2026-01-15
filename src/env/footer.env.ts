@@ -21,8 +21,8 @@ export const FOOTER_ENV: IFOOTER = {
         TITLE_3: "Contacto",
         CONTACT_DETAILS: [
             {id:1, text: "Atención personalizada", link: false},
-            {id:2, text: "WhatsApp: +52 XXX XXX XXXX", link: false},
-            {id:3, text: "Correo: contacto@tusitio.com", link: true}
+            {id:2, text: "WhatsApp: +52 55 29 71 73 74", link: false},
+            {id:3, text: "Correo: ventas@desinmix.com", link: true}
         ],
         FOOTER_END: "Copyright 2025 © Desinmix"
     }

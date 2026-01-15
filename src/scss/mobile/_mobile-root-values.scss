@@ -7,10 +7,18 @@
   --icon-navbar-width: #{const.$icon-navbar-width};
   --hero-content-margin-top: #{const.$hero-content-margin-top};
   --hero-content-padding: #{const.$hero-content-padding};
+  --web-develop-subheader-font-size: #{const.$web-develop-subheader-font-size};
+  --web-develop-p-font-size: #{const.$web-develop-p-font-size};
+  --sub-content-padding-left: #{const.$sub-content-padding-left};
+  --sub-content-padding-right: #{const.$sub-content-padding-right};
 }
 
 @include mobile {
   :root {
+    --sub-content-padding-left: #{const.$sub-content-padding-left-mobile};
+    --sub-content-padding-right: #{const.$sub-content-padding-right-mobile};
+    --web-develop-subheader-font-size: #{const.$web-develop-subheader-font-size-mobile};
+    --web-develop-p-font-size: #{const.$web-develop-p-font-size-mobile};
     --nav-wrapper-justify-content: #{const.$nav-wrapper-justify-content-mobile};
     --icon-navbar-width: #{const.$icon-navbar-width-mobile};
     --hero-content-margin-top: #{const.$hero-content-margin-top-mobile};

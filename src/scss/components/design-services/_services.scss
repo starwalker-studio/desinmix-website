@@ -1,6 +1,7 @@
 @forward "/src/scss/base";
 @forward "/src/scss/components";
 @use "/src/scss/styles/" as *;
+@use "/src/scss/utils/" as *;
 
 .web_services_section_desc {
   @include background-section-style;
@@ -46,14 +47,23 @@
       text-align: center;
       h3 {
         @include column-header-style;
+        @include mobile {
+          font-size: 1.2rem;
+        }
       }
       .price {
         @include column-price-style;
         span {
           @include column-price-span-style(1.2rem);
+          @include mobile {
+            @include column-price-span-style(1rem);
+          }
         }
         p {
           @include column-price-text-style(2.1rem);
+          @include mobile {
+            @include column-price-text-style(1.5rem);
+          }
         }
       }
     }
@@ -75,6 +85,9 @@
 
   .details_list {
     @include details-list-style(5.1ex, 11ex);
+    @include mobile {
+      @include details-list-style(5.1ex, 3ex);      
+    }
     ul {
       padding-left: 0;
       list-style: none;

@@ -1,16 +1,8 @@
 @forward "/src/scss/base";
 @forward "/src/scss/components";
+@forward "/src/scss/components/design-services/main-hero-services/";
 @use "/src/scss/styles/" as *;
-
-.web_design_section {
-  @include background-section-style;
-  background: var(--services-hero-background-image);
-  font-family: var(--main-font-family-open-oswald);
-}
-
-.overlay {
-  @include overlay-style;
-}
+@use "/src/scss/utils/" as *;
 
 .web_design_container {
   @include container-style;
@@ -18,32 +10,6 @@
 
 .web_design_wrapper {
   @include wrapper-style;
-}
-
-.web_design_content {
-  color: #fff;
-  position: relative;
-  z-index: 2;
-  padding: 2rem;
-
-  .web_design_header {
-    text-align: center;
-
-    h2 {
-      @include h2-header-content-style;
-    }
-  }
-
-  .web_design_text {
-    display: flex;
-    justify-content: center;
-    text-align: start;
-    padding: 1ex;
-
-    p {
-      @include p-text-content-style;
-    }
-  }
 }
 
 .web_desgin_img {
@@ -89,6 +55,10 @@
   gap: 5.8ex;
   width: 100%;
   font-family: var(--main-font-family-open-montserrat);
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+  }
 
   h2 {
     text-transform: uppercase;
@@ -131,6 +101,9 @@
     display: flex;
     align-items: center;
     gap: 3.5ex;
+    @include mobile {
+      flex-direction: column;
+    }
 
     .price_button {
       @include button-style(#0a7995, #fff, 2.5ex, 600, 250px, #0a4a5a, #fff);
@@ -153,6 +126,13 @@
         margin: 0;
         padding-left: 0;
         list-style: none;
+      }
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+      li {
+        cursor: pointer;
       }
     }
   }
