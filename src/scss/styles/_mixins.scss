@@ -67,6 +67,9 @@
     cursor: pointer;
     font-weight: $font-weight;
     transition: 0.4s all ease;
+    @include tablet-md {
+      padding: 10px 18px;      
+    }
 
     &:hover {
       color: $h-color;
@@ -166,6 +169,14 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
+  @include tablet-xl {
+    padding-left: .80rem;
+    padding-right: .80rem;
+  }
+  @include tablet-md {
+    padding-left: .40rem;
+    padding-right: .40rem;
+  }
 }
 
 @mixin wrapper-style {
@@ -199,6 +210,9 @@
     flex-direction: column;
     padding: 0;
   }
+  @include tablet-md {
+    gap: 1ex;
+  }
 }
 
 @mixin description-column-style {
@@ -207,6 +221,9 @@
   border-radius: 20px;
   background: #fff;
   width: 100%;
+  @include tablet-md {
+    padding: 4ex 2ex 4ex 2ex;
+  }
 }
 
 @mixin column-header-style {
@@ -215,7 +232,7 @@
   padding: 0;
   text-transform: uppercase;
   font-weight: 760;
-  color: #413a3a;
+  color: #413a3a;  
 }
 
 @mixin column-price-style {

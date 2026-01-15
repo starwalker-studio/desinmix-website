@@ -26,7 +26,7 @@
 .web_services_grid_3 {
   @include packages-grid-template-style(3, 1fr);
   margin-top: 5ex;
-  margin-bottom: 5ex;  
+  margin-bottom: 5ex;
 }
 
 .web_services_packages_wrapper_md {
@@ -50,6 +50,12 @@
         @include mobile {
           font-size: 1.2rem;
         }
+        @include tablet-xl {
+          font-size: 1.4rem;
+        }
+        @include tablet-md {
+          font-size: 1.2rem;
+        }
       }
       .price {
         @include column-price-style;
@@ -58,10 +64,16 @@
           @include mobile {
             @include column-price-span-style(1rem);
           }
+          @include tablet-md {
+            @include column-price-span-style(1rem);
+          }
         }
         p {
           @include column-price-text-style(2.1rem);
           @include mobile {
+            @include column-price-text-style(1.5rem);
+          }
+          @include tablet-md {
             @include column-price-text-style(1.5rem);
           }
         }
@@ -86,7 +98,13 @@
   .details_list {
     @include details-list-style(5.1ex, 11ex);
     @include mobile {
-      @include details-list-style(5.1ex, 3ex);      
+      @include details-list-style(5.1ex, 3ex);
+    }
+    @include tablet-xl {
+      @include details-list-style(5.1ex, 1.1ex);
+    }
+    @include tablet-md {
+      @include details-list-style(5.1ex, 2.8ex);
     }
     ul {
       padding-left: 0;
@@ -129,14 +147,32 @@
       text-align: center;
       h3 {
         @include column-header-style;
+        @include tablet-xl {
+          font-size: 1.4rem;
+        }
+        @include tablet-md {
+          font-size: 1.2rem;
+        }
       }
       .price {
-        @include column-price-style;        
+        @include column-price-style;
         span {
           @include column-price-span-style(1rem);
+          @include tablet-xl {
+            @include column-price-span-style(.80rem);
+          }
+          @include tablet-md {
+            @include column-price-span-style(.70rem);
+          }
         }
         p {
           @include column-price-text-style(1.6rem);
+          @include tablet-xl {
+            @include column-price-text-style(1.4rem);
+          }
+          @include tablet-md {
+            @include column-price-text-style(1.2rem);
+          }
         }
       }
     }
@@ -153,9 +189,12 @@
       background: var(--main-orange-color);
       margin: 12px auto 0 auto;
       border-radius: 10px;
+      @include tablet-md {
+        width: 130px;
+      }
     }
   }
-  
+
   .short_desc {
     text-align: center;
     margin-bottom: 2rem;
@@ -167,17 +206,31 @@
       font-size: 1.6ex;
     }
   }
-  
+
   .pack_description {
     font-family: var(--main-font-family-open-roboto);
     padding: 2ex;
     p {
       font-style: italic;
       font-size: 1.9ex;
+      @include tablet-xl {
+        font-size: 1.3ex;
+      }
+      @include tablet-md {
+        font-size: 1.3ex;
+      }
     }
   }
   .details_list {
     @include details-list-style(1.1ex, 1.8ex);
+    @include tablet-xl {
+      @include details-list-style(1.1ex, 1ex);
+      font-size: 1.3rex;
+    }
+    @include tablet-md {
+      @include details-list-style(1.1ex, 1ex);
+      font-size: 1.3rex;
+    }
     ul {
       padding-left: 0;
       list-style: none;
@@ -197,6 +250,12 @@
   border: solid 6px #acb930;
   .quote_button {
     @include button-style(#acb930, #fff, 2.5ex, 600, 250px, #849114, #fff);
+    @include tablet-xl {
+      @include button-style(#acb930, #fff, 2.5ex, 600, 205px, #849114, #fff);
+    }
+    @include tablet-md {
+      @include button-style(#acb930, #fff, 2.5ex, 600, 205px, #849114, #fff);
+    }
   }
 }
 
@@ -204,6 +263,12 @@
   border: solid 6px #30b9b2;
   .quote_button {
     @include button-style(#30b9b2, #fff, 2.5ex, 600, 250px, #227974, #fff);
+    @include tablet-xl {
+      @include button-style(#30b9b2, #fff, 2.5ex, 600, 205px, #227974, #fff);
+    }
+    @include tablet-md {
+      @include button-style(#30b9b2, #fff, 2.5ex, 600, 205px, #227974, #fff);
+    }
   }
 }
 
@@ -211,6 +276,12 @@
   border: solid 6px #4298d1;
   .quote_button {
     @include button-style(#4298d1, #fff, 2.5ex, 600, 250px, #1e4c77, #fff);
+    @include tablet-xl {
+      @include button-style(#4298d1, #fff, 2.5ex, 600, 205px, #1e4c77, #fff);
+    }
+    @include tablet-md {
+      @include button-style(#4298d1, #fff, 2.5ex, 600, 205px, #1e4c77, #fff);
+    }
   }
 }
 
@@ -218,6 +289,12 @@
   border: solid 6px var(--main-orange-color);
   .quote_button {
     @include button-style(#d9762b, #fff, 2.5ex, 600, 250px, #6d3912, #fff);
+    @include tablet-xl {
+      @include button-style(#d9762b, #fff, 2.5ex, 600, 205px, #6d3912, #fff);
+    }
+    @include tablet-md {
+      @include button-style(#d9762b, #fff, 2.5ex, 600, 205px, #6d3912, #fff);
+    }
   }
 }
 
@@ -225,6 +302,12 @@
   border: solid 6px var(--main-green-color);
   .quote_button {
     @include button-style(#119346, #fff, 2.5ex, 600, 250px, #084721, #fff);
+    @include tablet-xl {
+      @include button-style(#119346, #fff, 2.5ex, 600, 205px, #084721, #fff);
+    }
+    @include tablet-md {
+      @include button-style(#119346, #fff, 2.5ex, 600, 205px, #084721, #fff);
+    }
   }
 }
 
@@ -232,6 +315,12 @@
   border: solid 6px #a336b9;
   .quote_button {
     @include button-style(#a336b9, #fff, 2.5ex, 600, 250px, #692277, #fff);
+    @include tablet-xl {
+      @include button-style(#a336b9, #fff, 2.5ex, 600, 205px, #692277, #fff);
+    }
+    @include tablet-md {
+      @include button-style(#a336b9, #fff, 2.5ex, 600, 205px, #692277, #fff);
+    }
   }
 }
 
@@ -239,5 +328,11 @@
   border: solid 6px var(--main-blue-color);
   .quote_button {
     @include button-style(#0a7995, #fff, 2.5ex, 600, 250px, #053e4d, #fff);
+    @include tablet-xl {
+      @include button-style(#0a7995, #fff, 2.5ex, 600, 205px, #053e4d, #fff);
+    }
+    @include tablet-md {
+      @include button-style(#0a7995, #fff, 2.5ex, 600, 205px, #053e4d, #fff);
+    }
   }
 }
