@@ -23,12 +23,18 @@ export const HeaderNavButtons = ({ style }: HeaderElementsProps) => {
             </NavLink>
           </div>
           <div className={style.whats_button}>
-            <button>
-              WhatsApp
-              <span>
-                <FontAwesomeIcon icon={faWhatsapp} />
-              </span>
-            </button>
+            <NavLink
+              to={"https://wa.me/message/2R4QSBXYEWTCA1"}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>
+                WhatsApp
+                <span>
+                  <FontAwesomeIcon icon={faWhatsapp} />
+                </span>
+              </button>
+            </NavLink>
           </div>
         </div>
       )}

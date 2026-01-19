@@ -53,5 +53,5 @@ export const MOBILE_MENU: IMOBILE_MENU[] = [
 
   { icon: faSuitcase, label: "Paquetes", href: "/paquetes" },
   { icon: faEnvelope, label: "Contacto", href: "/contacto" },
-  { icon: faWhatsapp, label: "WhatsApp", href: "https://wa.me/..." },
+  { icon: faWhatsapp, label: "WhatsApp", href: "https://wa.me/message/2R4QSBXYEWTCA1" },
 ];
