@@ -11,7 +11,7 @@ import type { IHEADER_ENV, IMOBILE_MENU } from "./interfaces/env.interface";
 export const HEADER_ENV: IHEADER_ENV = {
   HEADER: {
     MAX_MOBILE_WIDTH: 736,
-    LOGO: "/logo/logo-darkblue-letters.png",
+    LOGO: "/img/logo/logo-darkblue-letters.png",
   },
   NAV_LINK: [
     { id: 1, label: "Inicio", path: "/" },

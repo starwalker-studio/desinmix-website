@@ -8,8 +8,8 @@ export const CONTENT: ICONTENT = {
         "certificados SSL. Además, desarrollamos sistemas a medida para que " +
         "puedas gestionar tus productos, clientes o servicios de forma sencilla y eficiente.",
     SERVICE_IMG: "/index/content/code-tech.jpg",
-    TECH_REACT_LOGO: "/index/content/tech-logos/react-logo-512px.png",
-    TECH_TS_LOGO: "/index/content/tech-logos/typescript-logo.png",
-    TECH_SASS_LOGO: "/index/content/tech-logos/sass-logo.svg",
-    TECH_PHP_LOGO: "/index/content/tech-logos/php-logo.svg",
+    TECH_REACT_LOGO: "/img/index/content/tech-logos/react-logo-512px.png",
+    TECH_TS_LOGO: "/img/index/content/tech-logos/typescript-logo.png",
+    TECH_SASS_LOGO: "/img/index/content/tech-logos/sass-logo.svg",
+    TECH_PHP_LOGO: "/img/index/content/tech-logos/php-logo.svg",
 }

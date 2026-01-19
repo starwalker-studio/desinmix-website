@@ -2,7 +2,7 @@ import type { IFOOTER } from "./interfaces/env.interface";
 
 export const FOOTER_ENV: IFOOTER = {
     FOOTER: {
-        LOGO: "/logo/logo-desinmix-586x524-darkblue.png"
+        LOGO: "/img/logo/logo-desinmix-586x524-darkblue.png"
     },
     CONTENT: {
         TITLE_1: "Soluciones Digitales",
