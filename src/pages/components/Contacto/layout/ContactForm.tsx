@@ -35,7 +35,6 @@ export const ContactForm = ({ style }: ContactFormProps) => {
   });
   const mailForm = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(mail);
     setMailPayload(packageId, mail);
   };
   useEffect(() => {
@@ -46,162 +45,174 @@ export const ContactForm = ({ style }: ContactFormProps) => {
   }, [sendResponse, successMessage, clearSendResponse]);
   return (
     <>
-      <form className={style.contact_form} onSubmit={mailForm}>
-        <div className={style.form_group}>
-          <label>Nombre</label>
-          <input
-            autoComplete="off"
-            id="name"
-            name="name"
-            type="text"
-            placeholder="Tu nombre (requerido)"
-            value={mail.name}
-            onChange={(e) =>
-              setMail((prev) => ({
-                ...prev,
-                name: e.target.value,
-              }))
-            }
-            onBlur={(e) => {
-              setNameError(validateName(e.target.value));
-            }}
-            required
-            disabled={loading}
-            className={nameError ? style.input_error : ""}
-          />
-          {nameError && <small className={style.error_text}>{nameError}</small>}
+      {loading ? (
+        <div className={style.loading_container}>
+          <div className={style.spinner} />
         </div>
-        <div className={style.form_group}>
-          <label>Correo electrónico</label>
-          <input
-            autoComplete="off"
-            id="email"
-            name="email"
-            type="email"
-            pattern="^[^@]+@[^@]+\.[^@]+$"
-            placeholder="correo@ejemplo.com (requerido)"
-            value={mail.email}
-            onChange={(e) =>
-              setMail((prev) => ({
-                ...prev,
-                email: e.target.value.trim(),
-              }))
-            }
-            onBlur={(e) => {
-              setEmailError(validateEmail(e.target.value.trim()));
-            }}
-            onKeyDown={(e) => {
-              if (e.key === " ") e.preventDefault();
-            }}
-            required
-            disabled={loading}
-            className={emailError ? style.input_error : ""}
-          />
-          {emailError && (
-            <small className={style.error_text}>{emailError}</small>
-          )}
-        </div>
-        <div className={style.form_group}>
-          <label>Télefono celular</label>
-          <input
-            autoComplete="off"
-            ref={phoneRef}
-            id="phone"
-            name="phone"
-            type="text"
-            pattern="^\(\+52\)\s\d{3}\s\d{3}\s\d{4}$"
-            placeholder="Tu WhatsApp (requerido)"
-            value={mail.phone}
-            onChange={(e) =>
-              setMail((prev) => ({
-                ...prev,
-                phone: e.target.value.trim(),
-              }))
-            }
-            onBlur={(e) => {
-              setPhoneError(validatePhone(e.target.value.trim()));
-            }}
-            required
-            disabled={loading}
-            className={phoneError ? style.input_error : ""}
-          />
-          {phoneError && (
-            <small className={style.error_text}>{phoneError}</small>
-          )}
-        </div>
-        <div className={style.form_group}>
-          <label>Asunto</label>
-          <input
-            autoComplete="off"
-            id="subject"
-            name="subject"
-            type="text"
-            placeholder="Asunto del mensaje"
-            value={mail.subject}
-            onChange={(e) =>
-              setMail((prev) => ({
-                ...prev,
-                subject: e.target.value,
-              }))
-            }
-            onBlur={(e) => {
-              setStatusMailError(validateStatusMail(e.target.value.trim()));
-            }}
-            required
-            disabled={loading}
-            className={statusMailError ? style.input_error : ""}
-          />
-          {statusMailError && (
-            <small className={style.error_text}>{statusMailError}</small>
-          )}
-        </div>
-        <div className={style.form_group}>
-          <label htmlFor="subject">Paquete de interés</label>
-          <select
-            id="package"
-            name="package"
-            value={packageId}
-            onChange={(e) => setPackageId(Number(e.target.value))}
+      ) : (
+        <form className={style.contact_form} onSubmit={mailForm}>
+          <div className={style.form_group}>
+            <label>Nombre</label>
+            <input
+              autoComplete="off"
+              id="name"
+              name="name"
+              type="text"
+              placeholder="Tu nombre (requerido)"
+              value={mail.name}
+              onChange={(e) =>
+                setMail((prev) => ({
+                  ...prev,
+                  name: e.target.value,
+                }))
+              }
+              onBlur={(e) => {
+                setNameError(validateName(e.target.value));
+              }}
+              required
+              disabled={loading}
+              className={nameError ? style.input_error : ""}
+            />
+            {nameError && (
+              <small className={style.error_text}>{nameError}</small>
+            )}
+          </div>
+          <div className={style.form_group}>
+            <label>Correo electrónico</label>
+            <input
+              autoComplete="off"
+              id="email"
+              name="email"
+              type="email"
+              pattern="^[^@]+@[^@]+\.[^@]+$"
+              placeholder="correo@ejemplo.com (requerido)"
+              value={mail.email}
+              onChange={(e) =>
+                setMail((prev) => ({
+                  ...prev,
+                  email: e.target.value.trim(),
+                }))
+              }
+              onBlur={(e) => {
+                setEmailError(validateEmail(e.target.value.trim()));
+              }}
+              onKeyDown={(e) => {
+                if (e.key === " ") e.preventDefault();
+              }}
+              required
+              disabled={loading}
+              className={emailError ? style.input_error : ""}
+            />
+            {emailError && (
+              <small className={style.error_text}>{emailError}</small>
+            )}
+          </div>
+          <div className={style.form_group}>
+            <label>Télefono celular</label>
+            <input
+              autoComplete="off"
+              ref={phoneRef}
+              id="phone"
+              name="phone"
+              type="text"
+              pattern="^\(\+52\)\s\d{3}\s\d{3}\s\d{4}$"
+              placeholder="Tu WhatsApp (requerido)"
+              value={mail.phone}
+              onChange={(e) =>
+                setMail((prev) => ({
+                  ...prev,
+                  phone: e.target.value.trim(),
+                }))
+              }
+              onBlur={(e) => {
+                setPhoneError(validatePhone(e.target.value.trim()));
+              }}
+              required
+              disabled={loading}
+              className={phoneError ? style.input_error : ""}
+            />
+            {phoneError && (
+              <small className={style.error_text}>{phoneError}</small>
+            )}
+          </div>
+          <div className={style.form_group}>
+            <label>Asunto</label>
+            <input
+              autoComplete="off"
+              id="subject"
+              name="subject"
+              type="text"
+              placeholder="Asunto del mensaje"
+              value={mail.subject}
+              onChange={(e) =>
+                setMail((prev) => ({
+                  ...prev,
+                  subject: e.target.value,
+                }))
+              }
+              onBlur={(e) => {
+                setStatusMailError(validateStatusMail(e.target.value.trim()));
+              }}
+              required
+              disabled={loading}
+              className={statusMailError ? style.input_error : ""}
+            />
+            {statusMailError && (
+              <small className={style.error_text}>{statusMailError}</small>
+            )}
+          </div>
+          <div className={style.form_group}>
+            <label htmlFor="subject">Paquete de interés</label>
+            <select
+              id="package"
+              name="package"
+              value={packageId}
+              onChange={(e) => setPackageId(Number(e.target.value))}
+              disabled={loading}
+            >
+              <option value="">Selecciona un paquete</option>
+
+              {PACKAGE_OPTIONS.map((pkg) => (
+                <option key={pkg.id} value={pkg.id}>
+                  {pkg.label}
+                </option>
+              ))}
+            </select>
+          </div>
+          <div className={style.form_group}>
+            <label>Mensaje</label>
+            <textarea
+              id="message"
+              name="message"
+              placeholder="Cuéntanos sobre tu proyecto"
+              value={mail.message}
+              onChange={(e) =>
+                setMail((prev) => ({
+                  ...prev,
+                  message: e.target.value,
+                }))
+              }
+              onBlur={(e) => {
+                setMailMsjError(validateMailMsj(e.target.value.trim()));
+              }}
+              rows={5}
+              required
+              disabled={loading}
+              className={mailMsjError ? style.input_error : ""}
+            />
+            {mailMsjError && (
+              <small className={style.error_text}>{mailMsjError}</small>
+            )}
+          </div>
+          <button
+            className={style.form_button}
+            type="submit"
             disabled={loading}
           >
-            <option value="">Selecciona un paquete</option>
-
-            {PACKAGE_OPTIONS.map((pkg) => (
-              <option key={pkg.id} value={pkg.id}>
-                {pkg.label}
-              </option>
-            ))}
-          </select>
-        </div>
-        <div className={style.form_group}>
-          <label>Mensaje</label>
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Cuéntanos sobre tu proyecto"
-            value={mail.message}
-            onChange={(e) =>
-              setMail((prev) => ({
-                ...prev,
-                message: e.target.value,
-              }))
-            }
-            onBlur={(e) => {
-              setMailMsjError(validateMailMsj(e.target.value.trim()));
-            }}
-            rows={5}
-            required
-            disabled={loading}
-            className={mailMsjError ? style.input_error : ""}
-          />
-          {mailMsjError && (
-            <small className={style.error_text}>{mailMsjError}</small>
-          )}
-        </div>
-        <button className={style.form_button} type="submit">
-          Enviar mensaje
-        </button>
-      </form>
+            Enviar mensaje
+          </button>
+        </form>
+      )}
     </>
   );
 };

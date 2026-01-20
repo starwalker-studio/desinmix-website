@@ -3,7 +3,7 @@ import type { Mail, MailResponse } from "./mail.type";
 
 export async function sendMail(mail: Mail): Promise<MailResponse> {
   const response = await fetch(
-    `${SERVER_ENV.SERVER_HOST_DEV}${SERVER_ENV.END_POINTS.MAIL}`,
+    `${SERVER_ENV.SERVER_HOST_PROD}${SERVER_ENV.END_POINTS.MAIL}`,
     {
       method: "POST",
       headers: {
