@@ -38,25 +38,6 @@
   }
   .example_link,
   .example_link_dashboard {
-    text-align: center;
-    border-radius: 1ex;
-    width: 300px;
-    padding: 1.1ex;
-    background: #cbcccb;
-    font-weight: 600;
-    font-size: 2ex;
-    cursor: pointer;
-    transition: 0.3s ease;
-    a {
-      transition: 0.3s ease;
-      text-decoration: none;
-      color: #0a0a0a;
-    }
-    &:hover {
-      background: #a7a8a7;
-      a {
-        color: #fff;
-      }
-    }
+    font-size: 2.5ex;
   }
 }

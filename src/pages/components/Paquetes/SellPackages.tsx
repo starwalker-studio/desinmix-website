@@ -45,6 +45,7 @@ export const SellPackages = () => {
                   href="https://coffeeshop.disenmix.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   Sitio 1
                 </a>
@@ -54,6 +55,7 @@ export const SellPackages = () => {
                   href="https://realestate.disenmix.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   Sitio 2
                 </a>
@@ -63,6 +65,7 @@ export const SellPackages = () => {
                   href="https://example.disenmix.com"
                   target="_blank"
                   rel="noopener noreferrer"
+                  onClick={(e) => e.stopPropagation()}
                 >
                   Dashboard
                 </a>
