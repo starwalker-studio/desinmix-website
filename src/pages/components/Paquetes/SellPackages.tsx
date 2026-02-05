@@ -1,4 +1,7 @@
-import { PACKAGES_INTRO, SERVICES_WEB_PACKAGES } from "../../../env/packages-services.env";
+import {
+  PACKAGES_INTRO,
+  SERVICES_WEB_PACKAGES,
+} from "../../../env/packages-services.env";
 import { DisplayColumnData } from "../../layout/DisplayColumnData";
 import style from "./SellPackages.module.scss";
 
@@ -27,7 +30,43 @@ export const SellPackages = () => {
               <h2>Paquetes</h2>
             </div>
             <div className={style.web_services_grid_3}>
-              <DisplayColumnData data={SERVICES_WEB_PACKAGES} style={style} isColumnLarge={false}/>
+              <DisplayColumnData
+                data={SERVICES_WEB_PACKAGES}
+                style={style}
+                isColumnLarge={false}
+              />
+            </div>
+            <div className={style.header_example}>
+              <h3>Ver ejemplos</h3>
+            </div>
+            <div className={style.see_examples}>
+              <div className={style.example_link}>
+                <a
+                  href="https://coffeeshop.disenmix.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sitio 1
+                </a>
+              </div>
+              <div className={style.example_link}>
+                <a
+                  href="https://realestate.disenmix.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Sitio 2
+                </a>
+              </div>
+              <div className={style.example_link_dashboard}>
+                <a
+                  href="https://example.disenmix.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Dashboard
+                </a>
+              </div>
             </div>
           </div>
         </div>

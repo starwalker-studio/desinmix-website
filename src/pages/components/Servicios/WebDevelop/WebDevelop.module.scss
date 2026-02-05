@@ -1,6 +1,6 @@
 @forward "/src/scss/base";
-@forward '/src/scss/components/design-services/';
-@forward '/src/scss/components/design-services/main-hero-services/';
+@forward "/src/scss/components/design-services/";
+@forward "/src/scss/components/design-services/main-hero-services/";
 @use "/src/scss/utils/" as *;
 @forward "/src/scss/mobile/";
 
@@ -24,7 +24,7 @@
   padding-left: 2ex;
   padding-right: 2ex;
   font-family: var(--main-font-family-open-roboto);
-  @include mobile{
+  @include mobile {
     padding: 0;
   }
 }
@@ -38,6 +38,36 @@
       font-style: italic;
       font-size: 1.5rem;
       font-weight: 350;
+    }
+  }
+
+  .see_example {
+    display: flex;
+    @include mobile {
+      display: none;
+    }
+    justify-content: center;
+    .example_link {
+      border-radius: 1ex;
+      width: 300px;
+      padding: 1.1ex;
+      background: #cbcccb;
+      font-weight: 600;
+      font-size: 2.8ex;
+      cursor: pointer;
+      transition: 0.3s ease;
+      a {        
+        transition: 0.3s ease;
+        text-decoration: none;
+        color: #0a0a0a;
+      }
+      &:hover {
+        background: #a7a8a7;
+        a {
+          color: #fff;
+
+        }
+      }
     }
   }
 }

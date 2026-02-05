@@ -36,6 +36,17 @@ export const WebDevelop = () => {
                 <div className={style.note_title}>
                   <h3>{WEB_DEVELOP.last_note.text}</h3>
                 </div>
+                <div className={style.see_example}>
+                  <div className={style.example_link}>
+                    <a
+                      href="https://example.disenmix.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Ver ejemplo
+                    </a>
+                  </div>
+                </div>
               </div>
               <div className={style.phrases_list_grid}>
                 {WEB_DEVELOP.last_note.phrases.map((item) => (

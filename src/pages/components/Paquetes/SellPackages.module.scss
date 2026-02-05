@@ -1,11 +1,62 @@
 @forward "/src/scss/components/design-services/main-hero-services/";
-@forward '/src/scss/components/design-services/';
+@forward "/src/scss/components/design-services/";
 @forward "/src/scss/base";
 @use "/src/scss/styles/" as *;
-
+@use "/src/scss/utils/" as *;
 
 .sell_packages_wrapper {
   padding-top: 2.8ex;
   padding-bottom: 2.8ex;
   max-width: 1680px;
+}
+
+.header_example {
+  text-align: center;
+  padding: 2ex;
+  h3 {
+    font-size: 3.5ex;
+  }
+}
+.see_examples {
+  display: grid;
+  @include mobile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  grid-template-columns: repeat(3, 1fr);
+  gap: 3ex;
+  justify-items: center;
+  padding: 3ex;
+  margin-top: 2ex;
+  margin-bottom: 6ex;
+  .example_link_dashboard {
+    @include mobile {
+      display: none;
+    }
+  }
+  .example_link,
+  .example_link_dashboard {
+    text-align: center;
+    border-radius: 1ex;
+    width: 300px;
+    padding: 1.1ex;
+    background: #cbcccb;
+    font-weight: 600;
+    font-size: 2ex;
+    cursor: pointer;
+    transition: 0.3s ease;
+    a {
+      transition: 0.3s ease;
+      text-decoration: none;
+      color: #0a0a0a;
+    }
+    &:hover {
+      background: #a7a8a7;
+      a {
+        color: #fff;
+      }
+    }
+  }
 }
