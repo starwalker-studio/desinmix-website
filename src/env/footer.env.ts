@@ -24,6 +24,6 @@ export const FOOTER_ENV: IFOOTER = {
             {id:2, text: "WhatsApp: +52 55 29 71 73 74", link: false},
             {id:3, text: "Correo: ventas@desinmix.com", link: true}
         ],
-        FOOTER_END: "Copyright 2026 © Desinmix"
+        FOOTER_END: "Copyright 2026 © Disenmix"
     }
 }
