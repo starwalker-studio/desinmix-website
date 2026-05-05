@@ -11,10 +11,10 @@ export const Hero = () => {
           Sitios web modernos, claros y sistemas diseñados para darle confianza
           a tus clientes.
         </p>
-        <div className={style.hero_button}>
-          <button>
-            <NavLink to={"/paquetes"}>Ver paquetes</NavLink>
-          </button>
+        <div>
+          <NavLink className={style.hero_button} to={"/paquetes"}>
+            <button>Ver paquetes</button>
+          </NavLink>
         </div>
       </div>
     </section>
