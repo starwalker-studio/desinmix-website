@@ -31,11 +31,6 @@
   padding: 3ex;
   margin-top: 2ex;
   margin-bottom: 6ex;
-  .example_link_dashboard {
-    @include mobile {
-      display: none;
-    }
-  }
   .example_link,
   .example_link_dashboard {
     font-size: 2.5ex;
