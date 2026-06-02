@@ -1,3 +1,4 @@
+import { NavLink } from "react-router-dom";
 import {
   PACKAGES_INTRO,
   SERVICES_WEB_PACKAGES,
@@ -36,40 +37,18 @@ export const SellPackages = () => {
                 isColumnLarge={false}
               />
             </div>
-            <div className={style.header_example}>
-              <h3>Ver ejemplos</h3>
+            <div className={style.see_portfolios_text}>
+              <h3>
+                ¿Tienes un negocio y quieres que tus clientes te encuentren y te elijan?
+              </h3>
+              <p>
+                Aquí mostramos nuestro portafolios: soluciones digitales para negocios reales.
+              </p>
             </div>
             <div className={style.see_examples}>
-              <div className={style.example_link}>
-                <a
-                  href="https://coffeeshop.disenmix.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Sitio 1
-                </a>
-              </div>
-              <div className={style.example_link}>
-                <a
-                  href="https://realestate.disenmix.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Sitio 2
-                </a>
-              </div>
-              <div className={style.example_link_dashboard}>
-                <a
-                  href="https://example.disenmix.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  onClick={(e) => e.stopPropagation()}
-                >
-                  Dashboard
-                </a>
-              </div>
+              <NavLink to={"/portafolio"}>
+                <button>Ver Portafolios</button>
+              </NavLink>
             </div>
           </div>
         </div>

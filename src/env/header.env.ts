@@ -1,11 +1,11 @@
-import {
-  faHome,
-  faGlobe,
-  faSuitcase,
-  faEnvelope,
-  faCaretDown,
-} from "@fortawesome/free-solid-svg-icons";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import {
+  faCaretDown,
+  faEnvelope,
+  faGlobe,
+  faHome,
+  faSuitcase,
+} from "@fortawesome/free-solid-svg-icons";
 import type { IHEADER_ENV, IMOBILE_MENU } from "./interfaces/env.interface";
 
 export const HEADER_ENV: IHEADER_ENV = {
@@ -31,6 +31,7 @@ export const HEADER_ENV: IHEADER_ENV = {
       icon: faCaretDown,
     },
     { id: 3, label: "Paquetes", path: "/paquetes" },
+    { id: 4, label: "Portafolios", path: "/portafolio" },
   ],
 };
 
@@ -51,6 +52,7 @@ export const MOBILE_MENU: IMOBILE_MENU[] = [
     ],
   },
 
+  { icon: faSuitcase, label: "Portafolios", href: "/portafolio" },
   { icon: faSuitcase, label: "Paquetes", href: "/paquetes" },
   { icon: faEnvelope, label: "Contacto", href: "/contacto" },
   { icon: faWhatsapp, label: "WhatsApp", href: "https://wa.me/message/2R4QSBXYEWTCA1" },

@@ -10,29 +10,37 @@
   max-width: 1680px;
 }
 
-.header_example {
+.see_portfolios_text {
+  padding: 4ex 0;
   text-align: center;
-  padding: 2ex;
   h3 {
-    font-size: 3.5ex;
+    font-size: 1.9rem;
+    @include mobile {
+      font-size: 1.3rem;
+    }
+  }
+  p {
+    font-size: 1.7rem;
+    font-weight: 200;
+    @include mobile {
+      font-size: 1.2rem;
+    }
   }
 }
+
 .see_examples {
-  display: grid;
-  @include mobile {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  }
-  grid-template-columns: repeat(3, 1fr);
-  gap: 3ex;
-  justify-items: center;
-  padding: 3ex;
-  margin-top: 2ex;
-  margin-bottom: 6ex;
-  .example_link,
-  .example_link_dashboard {
-    font-size: 2.5ex;
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1ex 2ex 8ex;
+  @include button-style(
+    #1bccf8,
+    #04142f,
+    var(--hero-button-font-size),
+    800,
+    280px,
+    #159bbd,
+    #eff1f5
+  );
+  
 }

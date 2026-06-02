@@ -1,5 +1,5 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
 import { FOOTER_ENV } from "../../../env/footer.env";
 import style from "./Footer.module.scss";
@@ -62,7 +62,10 @@ export const Footer = () => {
       </footer>
       <footer className={style.footer_background_dark}>
         <div className={style.copyright}>
-          <p>{FOOTER_ENV.CONTENT.FOOTER_END}</p>
+          <p>
+            © {new Date().getFullYear()} Disenmix. Todos los derechos
+            reservados.
+          </p>
         </div>
       </footer>
     </>
