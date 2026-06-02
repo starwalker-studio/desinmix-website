@@ -42,12 +42,12 @@ export const SellPackages = () => {
                 ¿Tienes un negocio y quieres que tus clientes te encuentren y te elijan?
               </h3>
               <p>
-                Aquí mostramos nuestro portafolios: soluciones digitales para negocios reales.
+                Aquí mostramos nuestro portafolio: soluciones digitales para negocios reales.
               </p>
             </div>
             <div className={style.see_examples}>
               <NavLink to={"/portafolio"}>
-                <button>Ver Portafolios</button>
+                <button>Ver Portafolio</button>
               </NavLink>
             </div>
           </div>

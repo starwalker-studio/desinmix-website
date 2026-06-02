@@ -16,7 +16,7 @@ export const Hero = () => {
             <button>Ver paquetes</button>
           </NavLink>
           <NavLink className={style.hero_button} to={"/portafolio"}>
-            <button>Ver portafolios</button>
+            <button>Ver portafolio</button>
           </NavLink>
         </div>
       </div>

@@ -31,7 +31,7 @@ export const HEADER_ENV: IHEADER_ENV = {
       icon: faCaretDown,
     },
     { id: 3, label: "Paquetes", path: "/paquetes" },
-    { id: 4, label: "Portafolios", path: "/portafolio" },
+    { id: 4, label: "Portafolio", path: "/portafolio" },
   ],
 };
 
@@ -52,7 +52,7 @@ export const MOBILE_MENU: IMOBILE_MENU[] = [
     ],
   },
 
-  { icon: faSuitcase, label: "Portafolios", href: "/portafolio" },
+  { icon: faSuitcase, label: "Portafolio", href: "/portafolio" },
   { icon: faSuitcase, label: "Paquetes", href: "/paquetes" },
   { icon: faEnvelope, label: "Contacto", href: "/contacto" },
   { icon: faWhatsapp, label: "WhatsApp", href: "https://wa.me/message/2R4QSBXYEWTCA1" },

@@ -1,7 +1,7 @@
 import type { IPORTFOLIO } from "./types/portfolio.types";
 
 export const PORTFOLIO: IPORTFOLIO = {
-  title: "Portafolios",
+  title: "Portafolio",
   text_1: "Negocios de todos los giros con identidad propia.",
   text_2:
     "Explora los ejemplos que hemos construido con base en tus intereses.",
