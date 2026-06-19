@@ -20,7 +20,7 @@
   justify-content: center;
   align-items: center;
   padding: 10ex 0 10ex;
-  max-width: 1610px;
+  max-width: 1400px;
   margin: 0 auto;
   @include mobile {
     padding: 3ex 0 3ex;
@@ -75,7 +75,7 @@
 
 .portfolio_grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-items: start;
   gap: 2.8ex;
   padding: 1.5ex;
@@ -98,4 +98,7 @@ div[data-color="blue"] {
 }
 div[data-color="green"] {
   background-color: var(--main-green-color);
+}
+div[data-color="yellow"] {
+  background-color: var(--main-yellow-color);
 }

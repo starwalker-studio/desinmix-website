@@ -1,5 +1,6 @@
 @forward 'index-root-values';
 @use '../styles/' as *;
+@use "/src/scss/utils/" as *;
 
 .tech_background {
     @include background-section-style;
@@ -35,13 +36,13 @@
 
 .content_grid {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     padding: 2ex;
 
-    @media (max-width: 992px) {
+    @include mobile {
         grid-template-columns: 1fr;
-        text-align: center;
+        text-align: start;
     }
 
     .text {
@@ -53,5 +54,8 @@
         max-width: 1030px;
         margin: 0 auto;
         text-shadow: var(--service-text-shadow);
+        @include tablet {
+            font-size: 1.3rem;
+        }
     }
 }

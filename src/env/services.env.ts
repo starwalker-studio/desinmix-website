@@ -1,3 +1,14 @@
+import {
+  faBullhorn,
+  faClock,
+  faCode,
+  faImages,
+  faMobileAlt,
+  faPenNib,
+  faShieldAlt,
+  faSlidersH,
+  faTools,
+} from "@fortawesome/free-solid-svg-icons";
 import type {
   IDESARROLLOWEBSEO,
   IECOMMERCE_DATA,
@@ -7,17 +18,6 @@ import type {
   IWEB_DEVELOP_CONTENT,
   IWEBSITE_ADMIN_PACKAGES,
 } from "./interfaces/env.interface";
-import {
-  faMobileAlt,
-  faTools,
-  faCode,
-  faShieldAlt,
-  faBullhorn,
-  faImages,
-  faPenNib,
-  faSlidersH,
-  faClock,
-} from "@fortawesome/free-solid-svg-icons";
 
 export const WEB_SERVICES_DESIGN: ISERVICES = {
   title: "Diseño Páginas Web",
@@ -309,6 +309,11 @@ export const ECOMMERCE_DATA: IECOMMERCE_DATA = {
     description:
       "La seguridad es una prioridad en cada tienda en línea que desarrollamos. Tu sitio opera bajo conexión HTTPS, respaldado por un certificado SSL, lo que protege la información sensible de tus clientes contra accesos no autorizados o fraudes. Además, las pasarelas de pago utilizadas cuentan con estándares internacionales de seguridad, lo que asegura que los datos financieros nunca se almacenen directamente en tu sitio, reduciendo riesgos y garantizando operaciones confiables.",
   },
+
+  last_text: {
+    title: "E-Commerce con sistema de carrito y de pago",
+    link: "https://music-store.disenmix.com"
+  }
 };
 
 export const ECOMMERCE_PACKAGES: IECOMMERCE_PACKAGES[] = [

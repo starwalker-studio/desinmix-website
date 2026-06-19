@@ -4,8 +4,8 @@ import {
   ECOMMERCE_DATA,
   ECOMMERCE_PACKAGES,
 } from "../../../../env/services.env";
-import style from "./ECommerce.module.scss";
 import { DisplayColumnData } from "../../../layout/DisplayColumnData";
+import style from "./ECommerce.module.scss";
 
 export const ECommerce = () => {
   return (
@@ -59,6 +59,22 @@ export const ECommerce = () => {
                   <div className={style.text_content}>
                     <p>{ECOMMERCE_DATA.security.description}</p>
                   </div>
+                </div>
+              </div>
+            </div>
+            <div className={style.e_commerce_link}>
+              <div className={style.note_title}>
+                <h3>{ECOMMERCE_DATA.last_text.title}</h3>
+              </div>
+              <div className={style.see_example}>
+                <div className={style.example_link}>
+                  <a
+                    href={ECOMMERCE_DATA.last_text.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
+                    <button>Ver Ejemplo</button>
+                  </a>
                 </div>
               </div>
             </div>

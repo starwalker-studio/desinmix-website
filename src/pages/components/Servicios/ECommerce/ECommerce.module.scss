@@ -1,7 +1,9 @@
 @forward "/src/scss/base";
-@forward '/src/scss/components/design-services/';
-@forward '/src/scss/components/design-services/main-hero-services/';
+@forward "/src/scss/components/design-services/";
+@forward "/src/scss/components/design-services/main-hero-services/";
 @forward "/src/scss/mobile/";
+@use "/src/scss/utils/" as *;
+@use "/src/scss/styles/" as *;
 
 .sub_content_grid {
   display: flex;
@@ -15,7 +17,7 @@
   justify-content: center;
   align-items: center;
   padding-left: var(--sub-content-padding-left);
-  padding-right: var(--sub-content-padding-left);;
+  padding-right: var(--sub-content-padding-left);
   margin-top: 3.8ex;
   margin-bottom: 3.8ex;
   font-family: var(--main-font-family-open-roboto);
@@ -45,6 +47,42 @@
     p {
       font-weight: 500;
       font-size: 1.18rem;
+    }
+  }
+}
+
+.e_commerce_link {
+  margin: 12px 0 32px;
+  text-align: center;
+  padding: 2ex;
+
+  .note_title {
+    h3 {
+      font-style: italic;
+      font-size: 1.5rem;
+      font-weight: 350;
+      @include tablet {
+        font-size: 1rem;
+      }
+    }
+  }
+
+  .see_example {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    z-index: 9999;
+    .example_link {
+      font-size: 2.5ex;
+      @include button-style(
+        #fdc8a0,
+        #04142f,
+        var(--hero-button-font-size),
+        500,
+        100%,
+        #d9762b,
+        #eff1f5
+      );
     }
   }
 }

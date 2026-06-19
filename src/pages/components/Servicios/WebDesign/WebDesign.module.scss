@@ -58,16 +58,25 @@
   @include mobile {
     display: flex;
     flex-direction: column;
+    margin: 0;
+    padding: 1.2ex;
+    gap: 3ex;
+  }
+  @include tablet {
+    gap: 3ex;
+    margin: 0;
+    grid-template-columns: repeat(1, 1fr);
+    padding: 1.2rem;
   }
 
   h2 {
     text-transform: uppercase;
-    font-size: 2.1ex;
+    font-size: .90rem;
     font-weight: 740;
   }
 
   p {
-    font-size: 1.9ex;
+    font-size: .78rem;
     font-weight: 560;
     text-align: start;
     line-height: 1.5;
@@ -107,6 +116,9 @@
 
     .price_button {
       @include button-style(#0a7995, #fff, 2.5ex, 600, 250px, #0a4a5a, #fff);
+      @include tablet {
+        @include button-style(#0a7995, #fff, 2ex, 600, 150px, #0a4a5a, #fff);
+      }
     }
     .contact_button {
       @include button-style(
@@ -115,9 +127,20 @@
         1.4rem,
         548,
         250px,
-        #83481b,
+        #f3a468,
         #fff
       );
+      @include tablet {
+        @include button-style(
+          #ee8738,
+          #2e2c2c,
+          1rem,
+          548,
+          150px,
+          #f3a468,
+          #fff
+        );        
+      }
     }
 
     .services_links {

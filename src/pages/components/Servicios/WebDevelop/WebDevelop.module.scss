@@ -2,6 +2,7 @@
 @forward "/src/scss/components/design-services/";
 @forward "/src/scss/components/design-services/main-hero-services/";
 @use "/src/scss/utils/" as *;
+@use "/src/scss/styles/" as *;
 @forward "/src/scss/mobile/";
 
 .sub_header {
@@ -38,19 +39,28 @@
       font-style: italic;
       font-size: 1.5rem;
       font-weight: 350;
+      @include tablet {
+        font-size: 1rem;
+      }
     }
   }
 
   .see_example {
     display: flex;
-    @include mobile {
-      display: none;
-    }
     justify-content: center;
     position: relative;
-  z-index: 9999;
+    z-index: 9999;
     .example_link {
       font-size: 2.5ex;
+      @include button-style(
+        #fdc8a0,
+        #04142f,
+        var(--hero-button-font-size),
+        500,
+        100%,
+        #d9762b,
+        #eff1f5
+      );
     }
   }
 }

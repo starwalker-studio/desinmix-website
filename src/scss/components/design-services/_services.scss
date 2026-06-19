@@ -27,12 +27,26 @@
   @include packages-grid-template-style(3, 1fr);
   margin-top: 5ex;
   margin-bottom: 5ex;
+  @include tablet {
+    @include packages-grid-template-style(2, 1fr);
+
+  }
+  @include tablet-xl {
+    @include packages-grid-template-style(2, 1fr);
+
+  }
 }
 
 .web_services_packages_wrapper_md {
   padding-top: 2.8ex;
   padding-bottom: 2.8ex;
   max-width: 1230px;
+  @include tablet {
+    padding: 1rem;
+  }
+  // @include ipad-mini {
+  //   padding: 0;
+  // }
 }
 
 .web_services_desc_column_large {
@@ -51,10 +65,10 @@
           font-size: 1.2rem;
         }
         @include tablet-xl {
-          font-size: 1.4rem;
-        }
-        @include tablet-md {
           font-size: 1.2rem;
+        }
+        @include tablet {
+          font-size: 1rem;
         }
       }
       .price {
@@ -64,8 +78,14 @@
           @include mobile {
             @include column-price-span-style(1rem);
           }
-          @include tablet-md {
+          @include tablet {
             @include column-price-span-style(1rem);
+          }
+          @include tablet-xl {
+            @include column-price-span-style(1rem);
+          }
+          @include ipad-mini {
+            @include column-price-span-style(.7rem);
           }
         }
         p {
@@ -73,8 +93,11 @@
           @include mobile {
             @include column-price-text-style(1.5rem);
           }
-          @include tablet-md {
-            @include column-price-text-style(1.5rem);
+          @include tablet {
+            @include column-price-text-style(1rem);
+          }
+          @include tablet-xl {
+            @include column-price-text-style(1.2rem);
           }
         }
       }
@@ -96,15 +119,15 @@
   }
 
   .details_list {
-    @include details-list-style(5.1ex, 11ex);
+    @include details-list-style(5ex, 10ex);
     @include mobile {
       @include details-list-style(5.1ex, 3ex);
     }
     @include tablet-xl {
-      @include details-list-style(5.1ex, 1.1ex);
+      @include details-list-style(5ex, 1ex);
     }
-    @include tablet-md {
-      @include details-list-style(5.1ex, 2.8ex);
+    @include tablet {
+      @include details-list-style(2ex, 1ex);
     }
     ul {
       padding-left: 0;
@@ -150,7 +173,7 @@
         @include tablet-xl {
           font-size: 1.4rem;
         }
-        @include tablet-md {
+        @include tablet {
           font-size: 1.2rem;
         }
       }
@@ -158,19 +181,13 @@
         @include column-price-style;
         span {
           @include column-price-span-style(1rem);
-          @include tablet-xl {
-            @include column-price-span-style(.80rem);
-          }
-          @include tablet-md {
-            @include column-price-span-style(.70rem);
+          @include tablet {
+            @include column-price-span-style(0.8rem);
           }
         }
         p {
           @include column-price-text-style(1.6rem);
-          @include tablet-xl {
-            @include column-price-text-style(1.4rem);
-          }
-          @include tablet-md {
+          @include tablet {
             @include column-price-text-style(1.2rem);
           }
         }
@@ -213,21 +230,14 @@
     p {
       font-style: italic;
       font-size: 1.9ex;
-      @include tablet-xl {
-        font-size: 1.3ex;
-      }
-      @include tablet-md {
-        font-size: 1.3ex;
+      @include tablet {
+        font-size: 1ex;
       }
     }
   }
   .details_list {
     @include details-list-style(1.1ex, 1.8ex);
-    @include tablet-xl {
-      @include details-list-style(1.1ex, 1ex);
-      font-size: 1.3rex;
-    }
-    @include tablet-md {
+    @include tablet {
       @include details-list-style(1.1ex, 1ex);
       font-size: 1.3rex;
     }

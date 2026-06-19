@@ -1,6 +1,7 @@
 @forward "/src/scss/base";
 @forward '/src/scss/components/design-services/';
 @forward '/src/scss/components/design-services/main-hero-services/';
+@use "/src/scss/utils/" as *;
 
 .sub_header {
   font-family: var(--main-font-family-open-roboto);
@@ -9,6 +10,9 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  @include tablet {
+    padding: 2rem;
+  }
   h2 {
     text-align: center;
     margin: 0;

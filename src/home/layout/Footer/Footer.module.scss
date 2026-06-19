@@ -33,8 +33,13 @@
     justify-items: center;
     align-items: start;
     padding: 2ex;
-    @include tablet-md {
-        gap: 2rem;
+    @include tablet {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: space-between;
+        gap: 4rem;
+        width: 100%;
     }
 }
 
@@ -58,17 +63,20 @@
     flex-direction: column;
     align-items: start;
     margin: 0;
+    @include tablet {
+        width: 100%;
+    }
 
     h2 {
         margin: 0 0 8px;
         font-size: 1.4em;
         text-transform: uppercase;
-        @include tablet-xl {
-            font-size: 1.2em;
-        }
-        @include tablet-md {
-            font-size: 1em;
-        }
+        // @include tablet-xl {
+        //     font-size: 1.2em;
+        // }
+        // @include tablet-md {
+        //     font-size: 1em;
+        // }
     }
 
     ul {
@@ -77,34 +85,43 @@
         padding: 0;
         font-size: 1.7ex;
         font-weight: 510;
-        @include tablet-xl {
-            font-size: 1.3ex;
-        }
-        @include tablet-md {
-            font-size: 1.1ex;
-        }
+        // @include tablet-xl {
+        //     font-size: 1.3ex;
+        // }
+        // @include tablet-md {
+        //     font-size: 1.1ex;
+        // }
     }
     
     p {
         margin: 0;
         font-size: 1.7ex;
         font-weight: 520;
-        @include tablet-xl {
-            font-size: 1.3ex;
-        }
-        @include tablet-md {
-            font-size: 1.1ex;
-        }
+        // @include tablet-xl {
+        //     font-size: 1.3ex;
+        // }
+        // @include tablet-md {
+        //     font-size: 1.1ex;
+        // }
+    }
+}
+
+.services_text {
+    @include tablet {
+        display: none;
+    }
+    @include tablet-xl {
+        display: none;
     }
 }
 
 .what_we_do_text {
     max-width: 290px;
-    @include tablet-xl {
-        max-width: 170px;
+    @include tablet {
+        display: none;
     }
-    @include tablet-md {
-        max-width: 130px;
+    @include tablet-xl {
+        display: none;
     }
 }
 
@@ -116,12 +133,12 @@
     }
 
     @include button-style(#25D366, #181717, .9rem, 600, none, #147538, #fff);
-    @include tablet-xl {
-        @include button-style(#25D366, #181717, .76rem, 600, 200px, #147538, #fff);
-    }
-    @include tablet-md {
-        @include button-style(#25D366, #181717, .6rem, 600, 140px, #147538, #fff);
-    }
+    // @include tablet-xl {
+    //     @include button-style(#25D366, #181717, .76rem, 600, 200px, #147538, #fff);
+    // }
+    // @include tablet-md {
+    //     @include button-style(#25D366, #181717, .6rem, 600, 140px, #147538, #fff);
+    // }
 }
 
 .footer_background_dark {

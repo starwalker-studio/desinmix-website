@@ -1,7 +1,7 @@
-import { WEB_DEVELOP_SEO, WEB_DEVELOP } from "../../../../env/services.env";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import style from "./WebDevelop.module.scss";
+import { WEB_DEVELOP, WEB_DEVELOP_SEO } from "../../../../env/services.env";
 import { DisplayColumnData } from "../../../layout/DisplayColumnData";
+import style from "./WebDevelop.module.scss";
 
 export const WebDevelop = () => {
   return (
@@ -36,6 +36,18 @@ export const WebDevelop = () => {
                 <div className={style.note_title}>
                   <h3>{WEB_DEVELOP.last_note.text}</h3>
                 </div>
+                <div className={style.phrases_list_grid}>
+                  {WEB_DEVELOP.last_note.phrases.map((item) => (
+                    <ul key={item.id}>
+                      <li>
+                        <span>
+                          <FontAwesomeIcon icon={item.icon} />
+                        </span>
+                        <p>{item.text}</p>
+                      </li>
+                    </ul>
+                  ))}
+                </div>
                 <div className={style.see_example}>
                   <div className={style.example_link}>
                     <a
@@ -43,22 +55,10 @@ export const WebDevelop = () => {
                       target="_blank"
                       rel="noopener noreferrer"
                     >
-                      Ver ejemplo
+                      <button>Ver ejemplo</button>
                     </a>
                   </div>
                 </div>
-              </div>
-              <div className={style.phrases_list_grid}>
-                {WEB_DEVELOP.last_note.phrases.map((item) => (
-                  <ul key={item.id}>
-                    <li>
-                      <span>
-                        <FontAwesomeIcon icon={item.icon} />
-                      </span>
-                      <p>{item.text}</p>
-                    </li>
-                  </ul>
-                ))}
               </div>
             </div>
           </div>

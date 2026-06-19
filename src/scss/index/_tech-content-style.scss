@@ -31,6 +31,9 @@
     margin-bottom: 10ex;
     margin-top: 10ex;
     @include index-max-width;
+    @include tablet {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 .icon_text {
@@ -60,6 +63,9 @@
         object-fit: contain;
         display: block;
         filter: var(--drop-shadow-filter);
+        @include mobile {
+            height: 98px;
+        }
     }
 }
 
@@ -72,7 +78,10 @@
 .header_tech {
     @include header-services;
     @include mobile {
-        font-size: 1.48ex;
+        font-size: .57rem;
+    }
+    @include tablet {
+        font-size: .74rem;
     }
 }
 

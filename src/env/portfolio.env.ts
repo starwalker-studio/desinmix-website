@@ -58,5 +58,19 @@ export const PORTFOLIO: IPORTFOLIO = {
         },
       ],
     },
+    {
+      id: 4,
+      data_color: "yellow",
+      title: "Tienda en Línea",
+      description:
+        "Experiencias de compra digitales pensadas para convertir visitantes en clientes desde el primer clic.",
+      buttons: [
+        {
+          id: 1,
+          label: "Music Store",
+          link: "https://music-store.disenmix.com/",
+        },
+      ],
+    },
   ],
 };

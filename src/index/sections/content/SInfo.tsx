@@ -1,13 +1,13 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faGlobe,
-  faGears,
-  faCartShopping,
   faBullseye,
+  faCartShopping,
   faDatabase,
+  faGears,
+  faGlobe,
 } from "@fortawesome/free-solid-svg-icons";
-import style from "./Content.module.scss";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { NavLink } from "react-router-dom";
+import style from "./Content.module.scss";
 
 export const SInfo = () => {
   return (
@@ -19,30 +19,36 @@ export const SInfo = () => {
         </div>
         <div className={style.info_grid_3}>
           <div className={style.item}>
-            <span>
-              <FontAwesomeIcon icon={faGlobe} />
-            </span>
-            <h3>Diseño de páginas web Informativas</h3>
+            <div className={style.item_header}>
+              <span>
+                <FontAwesomeIcon icon={faGlobe} />
+              </span>
+              <h3>Páginas web Informativas</h3>
+            </div>
             <p>
               Una web informativa bien diseñada que comunica quién eres y qué
               ofreces desde el primer vistazo.
             </p>
           </div>
           <div className={style.item}>
-            <span>
-              <FontAwesomeIcon icon={faGears} />
-            </span>
-            <h3>Diseño de páginas web Autoadministrables</h3>
+            <div className={style.item_header}>
+              <span>
+                <FontAwesomeIcon icon={faGears} />
+              </span>
+              <h3>Páginas web Autoadministrables</h3>
+            </div>
             <p>
               Control total de tu contenido gracias a un dashboard donde podrás
               editar tu sitio sin depender de terceros.
             </p>
           </div>
           <div className={style.item}>
-            <span>
-              <FontAwesomeIcon icon={faCartShopping} />
-            </span>
-            <h3>Diseño de páginas web para Reservación o E-commerce</h3>
+            <div className={style.item_header}>
+              <span>
+                <FontAwesomeIcon icon={faCartShopping} />
+              </span>
+              <h3>E-commerce</h3>
+            </div>
             <p>
               Convierte tu idea en un negocio digital con plataformas de venta o
               reservación listas para operar.
@@ -51,20 +57,24 @@ export const SInfo = () => {
         </div>
         <div className={style.info_grid_2}>
           <div className={style.item}>
-            <span>
-              <FontAwesomeIcon icon={faBullseye} />
-            </span>
-            <h3>Diseño de Landing Pages</h3>
+            <div className={style.item_header}>
+              <span>
+                <FontAwesomeIcon icon={faBullseye} />
+              </span>
+              <h3>Landing Pages</h3>
+            </div>
             <p>
               Páginas diseñadas para convertir visitantes en clientes, perfectas
               para campañas y anuncios.
             </p>
           </div>
           <div className={style.item}>
-            <span>
-              <FontAwesomeIcon icon={faDatabase} />
-            </span>
-            <h3>Diseño de páginas Empresariales</h3>
+            <div className={style.item_header}>
+              <span>
+                <FontAwesomeIcon icon={faDatabase} />
+              </span>
+              <h3>Páginas Empresariales</h3>
+            </div>
             <p>
               Desarrollo de plataformas empresariales con panel de control para
               gestionar clientes, productos y procesos internos.

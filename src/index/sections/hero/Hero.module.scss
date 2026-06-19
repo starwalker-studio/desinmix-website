@@ -2,11 +2,18 @@
 @forward "/src/scss/index/index-root-values";
 @forward "/src/scss/base/";
 @forward "/src/scss/styles/";
+@use "/src/scss/utils/" as *;
 
 .hero {
   @include background-section-style;
   background-image: var(--hero-background-image);
   height: var(--hero-height);
+  @include tablet {
+    height: 850px;
+  }
+  @include tablet-xl {
+    height: 850px;
+  }
 }
 
 .overlay {
@@ -28,35 +35,40 @@
     margin-bottom: 15px;
     line-height: 1.4;
     text-transform: uppercase;
+    @include tablet {
+      font-size: 1.8rem;
+    }
   }
 
   p {
     font-size: var(--hero-p-font-size);
     margin-bottom: 38px;
     opacity: 0.9;
+    @include tablet {
+      font-size: 1.1rem;
+    }
   }
 
-.buttons {
-display: flex;
-gap: 2ex;
-align-items: center;
-justify-content: center;
-width: 100%;
-  .hero_button {
+  .buttons {
     display: flex;
+    gap: 2ex;
     align-items: center;
     justify-content: center;
-    text-decoration: none;
+    width: 100%;
+    .hero_button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+    @include button-style(
+      #eff1f5,
+      #04142f,
+      var(--hero-button-font-size),
+      500,
+      100%,
+      #d9762b,
+      #eff1f5
+    );
   }
-  @include button-style(
-    #eff1f5,
-    #04142f,
-    var(--hero-button-font-size),
-    600,
-    100%,
-    #d9762b,
-    #eff1f5
-  );
-}
-
 }

@@ -127,6 +127,10 @@ export interface IECOMMERCE_DATA {
     title: string;
     description: string;
   };
+  last_text: {
+    title: string;
+    link: string;
+  };
 }
 
 export interface IECOMMERCE_PACKAGES {

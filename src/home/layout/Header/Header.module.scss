@@ -50,6 +50,9 @@
       max-width: 100%;
       display: inline-block;
       width: var(--icon-navbar-width);
+      @include tablet {
+        width: 120px;
+      }
     }
   }
 
@@ -58,8 +61,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    @include tablet-md {
+    font-size: .87rem;
+    @include tablet {
       font-size: 10px;
+    }
+    @include tablet-xl {
+      font-size: 15px;
     }
 
     ul {
@@ -75,7 +82,7 @@
       margin-left: 2ex;
       margin-right: 2ex;
       text-transform: uppercase;
-      font-weight: 430;
+      font-weight: 400;
       line-height: 1.825;
 
       a {
@@ -162,7 +169,13 @@
       margin-left: 8px;
     }
 
-    @include header-button-style(#ee8738, #f59d5a, 1.78ex, 440, #83481b, #fff);
+    @include header-button-style(#ee8738, #f59d5a, 1.38ex, 440, #83481b, #fff);
+    @include tablet {
+      @include header-button-style(#ee8738, #f59d5a, 1ex, 440, #83481b, #fff);
+    }
+    @include tablet-xl {
+      @include header-button-style(#ee8738, #f59d5a, 1ex, 440, #83481b, #fff);
+    }
   }
 
   .whats_button {
@@ -170,6 +183,12 @@
       margin-left: 8px;
     }
 
-    @include header-button-style(#25d366, #64f599, 1.78ex, 440, #147538, #fff);
+    @include header-button-style(#25d366, #64f599, 1.38ex, 440, #147538, #fff);
+    @include tablet {
+      @include header-button-style(#25d366, #64f599, 1ex, 440, #147538, #fff);
+    }
+    @include tablet-xl {
+      @include header-button-style(#25d366, #64f599, 1ex, 440, #147538, #fff);
+    }
   }
 }

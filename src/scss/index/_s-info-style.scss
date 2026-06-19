@@ -16,7 +16,10 @@
 .header {
     @include header-services;
     @include mobile {
-        font-size: 1.4ex;
+        font-size: .58rem;
+    }
+    @include tablet {
+        font-size: 1.1ex;
     }
 
     p {
@@ -31,6 +34,9 @@
         display: grid;
         grid-template-columns: 1fr;
     }
+    @include tablet {
+        gap: .7ex;
+    }
 }
 
 .info_grid_2 {
@@ -43,20 +49,34 @@
 
 .item {
     width: 100%;
-    max-width: 380px;
     padding: 1.5rem;
-    text-align: center;
-
-    span {
-        font-size: 1.77em;
+    // text-align: center;
+    .item_header {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1.3ex;
+        @include mobile {
+            justify-content: start;
+        }
+        span {
+            font-size: 1rem;
+        }
+    
+        h3 {
+            font-size: 2.2ex;
+            @include tablet {
+                font-size: .8rem;
+            }
+        }
     }
 
-    h3 {
-        font-size: 2.5ex;
-    }
 
     p {
-        font-size: 2.3ex;
+        font-size: 1rem;
+        @include tablet {
+            font-size: .8rem;
+        }
     }
 }
 

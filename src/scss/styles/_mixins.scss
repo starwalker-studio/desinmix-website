@@ -22,12 +22,12 @@
 @mixin info_grid($v1, $v2) {
   display: grid;
   grid-template-columns: repeat($v1, $v2);
-  gap: 3rem;
+  gap: 2rem;
   width: 100%;
   max-width: 1200px;
   margin: 0 auto;
   justify-items: center;
-  align-items: center;
+  align-items: start;
   padding: 2rem;
 }
 
@@ -170,11 +170,7 @@
     padding-left: 1rem;
     padding-right: 1rem;
   }
-  @include tablet-xl {
-    padding-left: .80rem;
-    padding-right: .80rem;
-  }
-  @include tablet-md {
+  @include tablet {
     padding-left: .40rem;
     padding-right: .40rem;
   }
@@ -183,18 +179,18 @@
 @mixin wrapper-style {
   padding-top: 2.8ex;
   padding-bottom: 2.8ex;
-  max-width: 1490px;
+  max-width: 1300px;
 }
 
 @mixin h2-header-content-style {
   text-transform: uppercase;
-  font-size: 2rem;
+  font-size: 1.6rem;
   font-weight: 700;
 }
 
 @mixin p-text-content-style {
   line-height: 1.3;
-  font-size: 2.8ex;
+  font-size: 2.2ex;
   font-weight: 500;
 }
 
@@ -222,7 +218,7 @@
   border-radius: 20px;
   background: #fff;
   width: 100%;
-  @include tablet-md {
+  @include tablet {
     padding: 4ex 2ex 4ex 2ex;
   }
 }
@@ -233,7 +229,7 @@
   padding: 0;
   text-transform: uppercase;
   font-weight: 760;
-  color: #413a3a;  
+  color: #413a3a;
 }
 
 @mixin column-price-style {
