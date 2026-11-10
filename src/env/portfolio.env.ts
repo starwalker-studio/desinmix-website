@@ -72,5 +72,19 @@ export const PORTFOLIO: IPORTFOLIO = {
         },
       ],
     },
+    {
+      id: 5,
+      data_color: "purple",
+      title: "Hotelería",
+      description:
+        "Sitios web para hoteles y resorts que muestran habitaciones, servicios y ubicación con elegancia y facilitan la reserva directa.",
+      buttons: [
+        {
+          id: 1,
+          label: "Hotel Cancún",
+          link: "https://hotel-presidente.disenmix.com/",
+        },
+      ],
+    },
   ],
 };
